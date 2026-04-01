@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 export default function TomDeVozPage() {
-  const filePath = path.join(process.cwd(), '..', 'tom-de-voz.md')
+  const filePath = path.join(process.cwd(), 'content', 'tom-de-voz.md')
   const content = fs.readFileSync(filePath, 'utf-8')
 
   return (
