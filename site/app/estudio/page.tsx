@@ -7,6 +7,18 @@ const cards = [
     description: 'Vocabulário, ritmo, exemplos reais e guia para escrever no tom do podcast.',
     tag: 'Referência',
   },
+  {
+    href: '/estudio/gerador',
+    title: 'Gerador de descrições',
+    description: 'Cole a transcrição, receba a descrição do episódio no tom certo.',
+    tag: 'IA',
+  },
+  {
+    href: '/estudio/wikipedia',
+    title: 'Wikipedia',
+    description: 'Crie e edite entradas da enciclopédia do podcast.',
+    tag: 'Conteúdo',
+  },
 ]
 
 export default function EstudioPage() {
