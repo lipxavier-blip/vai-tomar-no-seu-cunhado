@@ -15,8 +15,8 @@ export default async function LerWikiPage({ params }: Props) {
   if (!entry) notFound()
 
   return (
-    <div>
-      <div className="flex items-start justify-between mb-8">
+    <div className="max-w-2xl">
+      <div className="flex items-start justify-between mb-10">
         <div>
           <Link
             href="/estudio/wikipedia"
@@ -31,17 +31,48 @@ export default async function LerWikiPage({ params }: Props) {
         </div>
         <Link
           href={`/estudio/wikipedia/${entry.slug}/editar`}
-          className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors mt-1 shrink-0"
+          className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors mt-1 shrink-0 ml-6"
         >
           Editar
         </Link>
       </div>
 
-      <article className="prose prose-invert prose-sm max-w-none text-[var(--muted)] prose-headings:text-[var(--foreground)] prose-a:text-[var(--accent)] prose-strong:text-[var(--foreground)]">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>
-          {entry.content}
-        </ReactMarkdown>
-      </article>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        components={{
+          h2: ({ children }) => (
+            <h2 className="text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mt-10 mb-4 pb-2 border-b border-[var(--border)]">
+              {children}
+            </h2>
+          ),
+          h3: ({ children }) => (
+            <h3 className="text-sm font-semibold text-[var(--foreground)] mt-6 mb-1.5">
+              {children}
+            </h3>
+          ),
+          p: ({ children }) => (
+            <p className="text-sm text-[var(--muted)] leading-relaxed mb-3">
+              {children}
+            </p>
+          ),
+          strong: ({ children }) => (
+            <strong className="font-semibold text-[var(--foreground)]">{children}</strong>
+          ),
+          ul: ({ children }) => (
+            <ul className="my-2 flex flex-col gap-1.5">
+              {children}
+            </ul>
+          ),
+          li: ({ children }) => (
+            <li className="text-sm text-[var(--muted)] leading-relaxed flex gap-2">
+              <span className="text-[var(--accent)] shrink-0 select-none mt-px">—</span>
+              <span>{children}</span>
+            </li>
+          ),
+        }}
+      >
+        {entry.content}
+      </ReactMarkdown>
     </div>
   )
 }
