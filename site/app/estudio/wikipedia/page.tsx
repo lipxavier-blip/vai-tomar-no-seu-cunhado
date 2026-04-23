@@ -1,9 +1,21 @@
 import Link from 'next/link'
-import { CATEGORY_LABELS } from '@/lib/wiki'
+import { CATEGORY_LABELS, WikiCategory, WikiEntry } from '@/lib/wiki'
 import { getWikiEntries } from '@/lib/wiki-server'
+
+const CATEGORY_ORDER: WikiCategory[] = ['episodios', 'personagens', 'piadas', 'temas', 'historia']
 
 export default async function EstudioWikipediaPage() {
   const entries = await getWikiEntries()
+
+  const grouped = CATEGORY_ORDER.reduce<Record<WikiCategory, WikiEntry[]>>(
+    (acc, cat) => {
+      acc[cat] = entries.filter((e) => e.category === cat)
+      return acc
+    },
+    {} as Record<WikiCategory, WikiEntry[]>
+  )
+
+  const activeCategories = CATEGORY_ORDER.filter((cat) => grouped[cat].length > 0)
 
   return (
     <div>
@@ -28,25 +40,31 @@ export default async function EstudioWikipediaPage() {
           </Link>
         </div>
       ) : (
-        <div className="flex flex-col gap-3">
-          {entries.map((entry) => (
-            <div
-              key={entry.id}
-              className="flex items-center justify-between bg-[var(--card)] border border-[var(--border)] rounded-xl px-5 py-4"
-            >
-              <Link href={`/estudio/wikipedia/${entry.slug}`} className="flex-1 min-w-0">
-                <p className="font-medium hover:text-[var(--accent)] transition-colors">{entry.title}</p>
-                <p className="text-xs text-[var(--muted)] mt-0.5">
-                  {CATEGORY_LABELS[entry.category]}
-                </p>
-              </Link>
-              <Link
-                href={`/estudio/wikipedia/${entry.slug}/editar`}
-                className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors ml-4 shrink-0"
-              >
-                Editar
-              </Link>
-            </div>
+        <div className="flex flex-col gap-10">
+          {activeCategories.map((cat) => (
+            <section key={cat}>
+              <h2 className="text-[10px] font-bold uppercase tracking-widest text-[var(--accent)] mb-3 pb-2 border-b border-[var(--border)]">
+                {CATEGORY_LABELS[cat]}
+              </h2>
+              <div className="flex flex-col gap-2">
+                {grouped[cat].map((entry) => (
+                  <div
+                    key={entry.id}
+                    className="flex items-center justify-between bg-[var(--card)] border border-[var(--border)] rounded-xl px-5 py-4"
+                  >
+                    <Link href={`/estudio/wikipedia/${entry.slug}`} className="flex-1 min-w-0">
+                      <p className="font-medium hover:text-[var(--accent)] transition-colors">{entry.title}</p>
+                    </Link>
+                    <Link
+                      href={`/estudio/wikipedia/${entry.slug}/editar`}
+                      className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors ml-4 shrink-0"
+                    >
+                      Editar
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       )}
