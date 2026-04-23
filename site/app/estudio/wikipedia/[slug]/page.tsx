@@ -37,42 +37,65 @@ export default async function LerWikiPage({ params }: Props) {
         </Link>
       </div>
 
-      <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
-        components={{
-          h2: ({ children }) => (
-            <h2 className="text-[10px] font-bold uppercase tracking-widest text-[var(--muted)] mt-10 mb-4 pb-2 border-b border-[var(--border)]">
-              {children}
-            </h2>
-          ),
-          h3: ({ children }) => (
-            <h3 className="text-sm font-semibold text-[var(--foreground)] mt-6 mb-1.5">
-              {children}
-            </h3>
-          ),
-          p: ({ children }) => (
-            <p className="text-sm text-[var(--muted)] leading-relaxed mb-3">
-              {children}
-            </p>
-          ),
-          strong: ({ children }) => (
-            <strong className="font-semibold text-[var(--foreground)]">{children}</strong>
-          ),
-          ul: ({ children }) => (
-            <ul className="my-2 flex flex-col gap-1.5">
-              {children}
-            </ul>
-          ),
-          li: ({ children }) => (
-            <li className="text-sm text-[var(--muted)] leading-relaxed flex gap-2">
-              <span className="text-[var(--accent)] shrink-0 select-none mt-px">—</span>
-              <span>{children}</span>
-            </li>
-          ),
-        }}
-      >
-        {entry.content}
-      </ReactMarkdown>
+      <div className="wiki-body">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          {entry.content}
+        </ReactMarkdown>
+      </div>
+
+      <style>{`
+        .wiki-body h2 {
+          font-size: 10px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.15em;
+          color: var(--accent);
+          margin-top: 2.5rem;
+          margin-bottom: 1rem;
+          padding-bottom: 0.5rem;
+          border-bottom: 1px solid var(--border);
+        }
+        .wiki-body h3 {
+          font-size: 0.9375rem;
+          font-weight: 700;
+          color: var(--foreground);
+          margin-top: 1.75rem;
+          margin-bottom: 0.375rem;
+        }
+        .wiki-body p {
+          font-size: 0.875rem;
+          color: var(--muted);
+          line-height: 1.75;
+          margin-bottom: 0.75rem;
+        }
+        .wiki-body strong {
+          font-weight: 600;
+          color: var(--foreground);
+        }
+        .wiki-body ul {
+          margin: 0.5rem 0 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.375rem;
+          list-style: none;
+          padding: 0;
+        }
+        .wiki-body li {
+          font-size: 0.875rem;
+          color: var(--muted);
+          line-height: 1.6;
+          display: flex;
+          gap: 0.5rem;
+        }
+        .wiki-body li::before {
+          content: '—';
+          color: var(--accent);
+          flex-shrink: 0;
+        }
+        .wiki-body li p {
+          margin: 0;
+        }
+      `}</style>
     </div>
   )
 }
