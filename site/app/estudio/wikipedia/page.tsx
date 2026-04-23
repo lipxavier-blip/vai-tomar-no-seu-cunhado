@@ -34,15 +34,15 @@ export default async function EstudioWikipediaPage() {
               key={entry.id}
               className="flex items-center justify-between bg-[var(--card)] border border-[var(--border)] rounded-xl px-5 py-4"
             >
-              <div>
-                <p className="font-medium">{entry.title}</p>
+              <Link href={`/estudio/wikipedia/${entry.slug}`} className="flex-1 min-w-0">
+                <p className="font-medium hover:text-[var(--accent)] transition-colors">{entry.title}</p>
                 <p className="text-xs text-[var(--muted)] mt-0.5">
                   {CATEGORY_LABELS[entry.category]}
                 </p>
-              </div>
+              </Link>
               <Link
                 href={`/estudio/wikipedia/${entry.slug}/editar`}
-                className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors"
+                className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors ml-4 shrink-0"
               >
                 Editar
               </Link>
