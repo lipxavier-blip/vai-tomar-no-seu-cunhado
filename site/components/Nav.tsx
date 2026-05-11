@@ -10,9 +10,6 @@ export default function Nav() {
         <Link href="/episodios" className="hover:text-[var(--foreground)] transition-colors">
           Episódios
         </Link>
-        <Link href="/wikipedia" className="hover:text-[var(--foreground)] transition-colors">
-          Wikipedia
-        </Link>
         <Link href="/sobre" className="hover:text-[var(--foreground)] transition-colors">
           Sobre
         </Link>
