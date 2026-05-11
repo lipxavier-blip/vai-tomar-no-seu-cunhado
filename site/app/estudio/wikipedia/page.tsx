@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { CATEGORY_LABELS, WikiCategory, WikiEntry } from '@/lib/wiki'
 import { getWikiEntries } from '@/lib/wiki-server'
+import RefreshButton from '@/components/RefreshButton'
 
 const CATEGORY_ORDER: WikiCategory[] = ['episodios', 'personagens', 'piadas', 'temas', 'historia']
 
@@ -22,7 +23,10 @@ export default async function EstudioWikipediaPage() {
       <div className="flex items-center justify-between mb-10">
         <div>
           <h1 className="text-3xl font-bold mb-2">Wikipedia</h1>
-          <p className="text-[var(--muted)]">{entries.length} entrada{entries.length !== 1 ? 's' : ''}</p>
+          <div className="flex items-center gap-2 mt-1">
+            <p className="text-[var(--muted)]">{entries.length} entrada{entries.length !== 1 ? 's' : ''}</p>
+            <RefreshButton />
+          </div>
         </div>
         <Link
           href="/estudio/wikipedia/nova"
