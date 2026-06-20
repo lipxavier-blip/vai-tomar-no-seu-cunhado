@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Nav from '@/components/Nav'
-import { getEpisodesWithStats, formatDuration, formatDate, formatPlays } from '@/lib/spreaker'
+import { getEpisodes, formatDuration, formatDate } from '@/lib/spreaker'
 
 export const metadata = {
   title: 'Episódios — Vai Tomar no Seu Cunhado',
 }
 
 export default async function EpisodiosPage() {
-  const episodes = await getEpisodesWithStats()
+  const episodes = await getEpisodes()
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -39,7 +39,6 @@ export default async function EpisodiosPage() {
                 </h2>
                 <p className="text-xs text-[var(--muted)] mt-0.5">
                   {formatDate(ep.published_at)} · {formatDuration(ep.duration)}
-                  {formatPlays(ep.downloads_count) && ` · ${formatPlays(ep.downloads_count)}`}
                 </p>
               </div>
             </Link>

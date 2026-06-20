@@ -30,6 +30,9 @@ export default async function EstudioLayout({
             <Link href="/estudio/wikipedia" className="hover:text-[var(--foreground)] transition-colors">
               Wikipedia
             </Link>
+            <Link href="/estudio/numeros" className="hover:text-[var(--foreground)] transition-colors">
+              Números
+            </Link>
           </nav>
         </div>
         <div className="flex items-center gap-4">

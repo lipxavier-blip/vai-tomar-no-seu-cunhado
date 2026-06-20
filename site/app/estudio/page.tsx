@@ -19,6 +19,12 @@ const cards = [
     description: 'Crie e edite entradas da enciclopédia do podcast.',
     tag: 'Conteúdo',
   },
+  {
+    href: '/estudio/numeros',
+    title: 'Números',
+    description: 'Downloads e plays por episódio, atualizados do Spreaker.',
+    tag: 'Métricas',
+  },
 ]
 
 export default function EstudioPage() {
