@@ -87,4 +87,24 @@ export async function getEpisodesWithStats(): Promise<SpreakerEpisode[]> {
   return episodes.map((ep, i) => ({ ...ep, ...stats[i] }))
 }
 
+export interface ShowStatPoint {
+  date: string
+  plays_count: number
+  plays_live_count: number
+  plays_ondemand_count: number
+  downloads_count: number
+}
+
+export async function getShowStats(
+  from: string,
+  to: string,
+  group: 'day' | 'week' | 'month'
+): Promise<ShowStatPoint[]> {
+  const params = new URLSearchParams({ from, to, group })
+  const res = await spreakerFetch(`/v2/shows/${SHOW_ID}/statistics/plays?${params}`)
+  if (!res.ok) return []
+  const data = await res.json()
+  return (data.response?.statistics ?? []) as ShowStatPoint[]
+}
+
 export { formatDuration, formatDate, formatPlays }
