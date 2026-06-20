@@ -1,12 +1,7 @@
-import { createClient } from '@/lib/supabase/server'
 import { cookies } from 'next/headers'
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest } from 'next/server'
 
 export async function GET(req: NextRequest) {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) return new Response('Unauthorized', { status: 401 })
-
   const code = req.nextUrl.searchParams.get('code')
   const state = req.nextUrl.searchParams.get('state')
   const error = req.nextUrl.searchParams.get('error')
@@ -16,7 +11,9 @@ export async function GET(req: NextRequest) {
 
   const cookieStore = await cookies()
   const expectedState = cookieStore.get('spreaker_oauth_state')?.value
-  if (state !== expectedState) return new Response('state inválido (possível CSRF)', { status: 400 })
+  if (!expectedState || state !== expectedState) {
+    return new Response('state inválido (possível CSRF ou cookie expirado)', { status: 400 })
+  }
   cookieStore.delete('spreaker_oauth_state')
 
   const tokenRes = await fetch('https://api.spreaker.com/oauth2/token', {
@@ -46,9 +43,9 @@ export async function GET(req: NextRequest) {
 </style></head>
 <body>
   <h1>Spreaker conectado ✓</h1>
-  <p>Copia o <code>refresh_token</code> abaixo e cola pro Claude. Esse token é de longa duração e será usado pra renovar o access_token automaticamente.</p>
+  <p>Copia o JSON inteiro abaixo e cola pro Claude.</p>
   <pre>${JSON.stringify(tokenData, null, 2)}</pre>
-  <div class="warn">Não compartilhe esse token publicamente. Depois de capturado, essa rota deveria ser desativada.</div>
+  <div class="warn">Não compartilhe esse token publicamente. Depois de capturado, essas rotas devem ser removidas ou o segredo trocado.</div>
 </body></html>`
 
   return new Response(html, { headers: { 'Content-Type': 'text/html; charset=utf-8' } })

@@ -1,12 +1,12 @@
-import { createClient } from '@/lib/supabase/server'
 import { cookies } from 'next/headers'
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 
-export async function GET() {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) return NextResponse.redirect(new URL('/login', process.env.SPREAKER_REDIRECT_URI!))
+export async function GET(req: NextRequest) {
+  const bootstrap = req.nextUrl.searchParams.get('bootstrap')
+  if (!bootstrap || bootstrap !== process.env.SPREAKER_BOOTSTRAP_SECRET) {
+    return new Response('Not found', { status: 404 })
+  }
 
   const state = crypto.randomBytes(16).toString('hex')
   const cookieStore = await cookies()
