@@ -40,8 +40,9 @@ function formatDate(dateStr: string): string {
 
 function formatPlays(count: number | undefined): string | null {
   if (count == null) return null
-  if (count >= 1000) return `${(count / 1000).toFixed(1).replace('.0', '')}k plays`
-  return `${count} plays`
+  const label = count === 1 ? 'download' : 'downloads'
+  if (count >= 1000) return `${(count / 1000).toFixed(1).replace('.0', '')}k ${label}`
+  return `${count} ${label}`
 }
 
 async function spreakerFetch(path: string): Promise<Response> {
@@ -61,7 +62,7 @@ async function spreakerFetch(path: string): Promise<Response> {
 }
 
 export async function getEpisodes(): Promise<SpreakerEpisode[]> {
-  const res = await spreakerFetch(`/v2/shows/${SHOW_ID}/episodes?limit=100&filter=editable`)
+  const res = await spreakerFetch(`/v2/shows/${SHOW_ID}/episodes?limit=100`)
   const data = await res.json()
   return data.response.items as SpreakerEpisode[]
 }
@@ -70,6 +71,20 @@ export async function getEpisode(episodeId: number): Promise<SpreakerEpisodeDeta
   const res = await spreakerFetch(`/v2/episodes/${episodeId}`)
   const data = await res.json()
   return data.response.episode as SpreakerEpisodeDetail
+}
+
+async function getEpisodeStats(episodeId: number): Promise<Pick<SpreakerEpisode, 'plays_count' | 'downloads_count'>> {
+  const res = await spreakerFetch(`/v2/episodes/${episodeId}`)
+  if (!res.ok) return {}
+  const data = await res.json()
+  const ep = data.response.episode
+  return { plays_count: ep.plays_count, downloads_count: ep.downloads_count }
+}
+
+export async function getEpisodesWithStats(): Promise<SpreakerEpisode[]> {
+  const episodes = await getEpisodes()
+  const stats = await Promise.all(episodes.map((ep) => getEpisodeStats(ep.episode_id)))
+  return episodes.map((ep, i) => ({ ...ep, ...stats[i] }))
 }
 
 export { formatDuration, formatDate, formatPlays }
