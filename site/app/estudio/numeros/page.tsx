@@ -12,7 +12,6 @@ export default async function NumerosPage() {
   const episodes = await getEpisodesWithStats()
 
   const totalDownloads = episodes.reduce((sum, ep) => sum + (ep.downloads_count ?? 0), 0)
-  const totalPlays = episodes.reduce((sum, ep) => sum + (ep.plays_count ?? 0), 0)
   const sorted = [...episodes].sort(
     (a, b) => (b.downloads_count ?? 0) - (a.downloads_count ?? 0)
   )
@@ -36,8 +35,8 @@ export default async function NumerosPage() {
           <p className="text-3xl font-bold">{fmt(totalDownloads)}</p>
         </div>
         <div className="bg-[var(--card)] border border-[var(--border)] rounded-xl p-5">
-          <p className="text-xs uppercase tracking-widest text-[var(--muted)] mb-2">Plays totais</p>
-          <p className="text-3xl font-bold">{fmt(totalPlays)}</p>
+          <p className="text-xs uppercase tracking-widest text-[var(--muted)] mb-2">Média por ep</p>
+          <p className="text-3xl font-bold">{fmt(Math.round(totalDownloads / Math.max(episodes.length, 1)))}</p>
         </div>
       </div>
 
@@ -63,7 +62,9 @@ export default async function NumerosPage() {
             </div>
             <div className="text-right shrink-0">
               <p className="text-sm font-semibold tabular-nums">{fmt(ep.downloads_count)}</p>
-              <p className="text-xs text-[var(--muted)] tabular-nums">{fmt(ep.plays_count)} plays</p>
+              {ep.plays_count != null && ep.plays_count > 0 && (
+                <p className="text-xs text-[var(--muted)] tabular-nums">{fmt(ep.plays_count)} plays</p>
+              )}
             </div>
           </div>
         ))}
