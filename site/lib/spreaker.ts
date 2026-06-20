@@ -1,3 +1,5 @@
+import { getSpreakerAccessToken, invalidateAccessToken } from './spreaker-auth'
+
 const SHOW_ID = 5951420
 
 export interface SpreakerEpisode {
@@ -11,6 +13,8 @@ export interface SpreakerEpisode {
   site_url: string
   download_url: string
   playback_url: string
+  plays_count?: number
+  downloads_count?: number
 }
 
 export interface SpreakerEpisodeDetail extends SpreakerEpisode {
@@ -34,22 +38,38 @@ function formatDate(dateStr: string): string {
   })
 }
 
+function formatPlays(count: number | undefined): string | null {
+  if (count == null) return null
+  if (count >= 1000) return `${(count / 1000).toFixed(1).replace('.0', '')}k plays`
+  return `${count} plays`
+}
+
+async function spreakerFetch(path: string): Promise<Response> {
+  let token = await getSpreakerAccessToken()
+  let res = await fetch(`https://api.spreaker.com${path}`, {
+    headers: { Authorization: `Bearer ${token}` },
+    next: { revalidate: 3600 },
+  })
+  if (res.status === 401) {
+    token = await invalidateAccessToken()
+    res = await fetch(`https://api.spreaker.com${path}`, {
+      headers: { Authorization: `Bearer ${token}` },
+      next: { revalidate: 3600 },
+    })
+  }
+  return res
+}
+
 export async function getEpisodes(): Promise<SpreakerEpisode[]> {
-  const res = await fetch(
-    `https://api.spreaker.com/v2/shows/${SHOW_ID}/episodes?limit=100`,
-    { next: { revalidate: 3600 } }
-  )
+  const res = await spreakerFetch(`/v2/shows/${SHOW_ID}/episodes?limit=100&filter=editable`)
   const data = await res.json()
   return data.response.items as SpreakerEpisode[]
 }
 
 export async function getEpisode(episodeId: number): Promise<SpreakerEpisodeDetail> {
-  const res = await fetch(
-    `https://api.spreaker.com/v2/episodes/${episodeId}`,
-    { next: { revalidate: 3600 } }
-  )
+  const res = await spreakerFetch(`/v2/episodes/${episodeId}`)
   const data = await res.json()
   return data.response.episode as SpreakerEpisodeDetail
 }
 
-export { formatDuration, formatDate }
+export { formatDuration, formatDate, formatPlays }

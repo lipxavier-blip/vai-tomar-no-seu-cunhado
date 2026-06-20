@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Nav from '@/components/Nav'
-import { getEpisodes, formatDuration, formatDate } from '@/lib/spreaker'
+import { getEpisodes, formatDuration, formatDate, formatPlays } from '@/lib/spreaker'
 
 export default async function Home() {
   const episodes = await getEpisodes()
@@ -67,6 +67,7 @@ export default async function Home() {
                 </h2>
                 <p className="text-xs text-[var(--muted)]">
                   {formatDate(latest.published_at)} · {formatDuration(latest.duration)}
+                  {formatPlays(latest.plays_count) && ` · ${formatPlays(latest.plays_count)}`}
                 </p>
               </div>
             </Link>

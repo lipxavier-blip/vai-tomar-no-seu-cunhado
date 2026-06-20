@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Nav from '@/components/Nav'
-import { getEpisodes, formatDuration, formatDate } from '@/lib/spreaker'
+import { getEpisodes, formatDuration, formatDate, formatPlays } from '@/lib/spreaker'
 
 export const metadata = {
   title: 'Episódios — Vai Tomar no Seu Cunhado',
@@ -39,6 +39,7 @@ export default async function EpisodiosPage() {
                 </h2>
                 <p className="text-xs text-[var(--muted)] mt-0.5">
                   {formatDate(ep.published_at)} · {formatDuration(ep.duration)}
+                  {formatPlays(ep.plays_count) && ` · ${formatPlays(ep.plays_count)}`}
                 </p>
               </div>
             </Link>
