@@ -16,25 +16,17 @@ export default async function LerWikiPage({ params }: Props) {
 
   return (
     <div className="max-w-2xl">
-      <div className="flex items-start justify-between mb-10">
-        <div>
-          <Link
-            href="/estudio/wikipedia"
-            className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors inline-block mb-4"
-          >
-            ← Wikipedia
-          </Link>
-          <p className="text-xs uppercase tracking-widest text-[var(--accent)] mb-2">
-            {CATEGORY_LABELS[entry.category]}
-          </p>
-          <h1 className="text-3xl font-bold">{entry.title}</h1>
-        </div>
+      <div className="mb-10">
         <Link
-          href={`/estudio/wikipedia/${entry.slug}/editar`}
-          className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors mt-1 shrink-0 ml-6"
+          href="/estudio/wikipedia"
+          className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors inline-block mb-4"
         >
-          Editar
+          ← Wikipedia
         </Link>
+        <p className="text-xs uppercase tracking-widest text-[var(--accent)] mb-2">
+          {CATEGORY_LABELS[entry.category]}
+        </p>
+        <h1 className="text-3xl font-bold">{entry.title}</h1>
       </div>
 
       <div className="wiki-body">

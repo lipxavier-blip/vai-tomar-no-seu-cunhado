@@ -1,17 +1,14 @@
-import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import LogoutButton from './LogoutButton'
+import { isAuthenticated } from '@/lib/auth'
 
 export default async function EstudioLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-
-  if (!user) redirect('/login')
+  if (!(await isAuthenticated())) redirect('/login')
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -35,10 +32,7 @@ export default async function EstudioLayout({
             </Link>
           </nav>
         </div>
-        <div className="flex items-center gap-4">
-          <span className="text-xs text-[var(--muted)]">{user.email}</span>
-          <LogoutButton />
-        </div>
+        <LogoutButton />
       </header>
       <main className="flex-1 px-6 py-8 max-w-4xl mx-auto w-full">
         {children}

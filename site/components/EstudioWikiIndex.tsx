@@ -64,23 +64,13 @@ export default function EstudioWikiIndex({ entries }: { entries: WikiEntry[] }) 
       ) : (
         <div className="flex flex-col gap-1.5">
           {filtered.map((entry) => (
-            <div
+            <Link
               key={entry.id}
-              className="flex items-center justify-between bg-[var(--card)] border border-[var(--border)] rounded-xl px-5 py-3.5"
+              href={`/estudio/wikipedia/${entry.slug}`}
+              className="block bg-[var(--card)] border border-[var(--border)] rounded-xl px-5 py-3.5 text-sm font-medium hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
             >
-              <Link
-                href={`/estudio/wikipedia/${entry.slug}`}
-                className="flex-1 min-w-0 text-sm font-medium hover:text-[var(--accent)] transition-colors"
-              >
-                {entry.title}
-              </Link>
-              <Link
-                href={`/estudio/wikipedia/${entry.slug}/editar`}
-                className="text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors ml-4 shrink-0"
-              >
-                Editar
-              </Link>
-            </div>
+              {entry.title}
+            </Link>
           ))}
         </div>
       )}
