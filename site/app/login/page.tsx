@@ -23,7 +23,7 @@ export default function LoginPage() {
     })
 
     if (error) {
-      setError('Algo deu errado. Tenta de novo.')
+      setError(`${error.message} (status ${error.status ?? '?'})`)
     } else {
       setSent(true)
     }
