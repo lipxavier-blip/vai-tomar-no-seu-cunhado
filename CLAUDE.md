@@ -22,10 +22,22 @@ Podcast bem-humorado de Felipe Xavier e Bruno Rezende (cunhados). Conversas livr
 vai-tomar-no-seu-cunhado/
 ├── CLAUDE.md          # este arquivo — instruções para o Claude
 ├── memory.md          # índice de memórias do projeto
+├── .env.local         # credenciais YouTube OAuth (gitignored)
+├── audiograma/
+│   └── gerar_audiograma.py  # capa borrada como fundo + capa nítida + onda sonora
+├── youtube/
+│   ├── gerar_thumbnail.py   # thumbnail 1280x720, mesmo estilo do audiograma
+│   ├── upload.py            # upload resumível via Data API v3
+│   └── set_thumbnail.py
 └── skills/
     ├── tone-checker.md  # skill para verificar tom de conteúdo
     └── learn.md         # skill para aprender sobre o podcast
 ```
+
+## Publicar episódio
+
+Pipeline completo (descrição → Spreaker → audiograma → YouTube → site) documentado na skill
+global `publicar-episodio-vtnsc` (`~/.claude/skills/publicar-episodio-vtnsc/SKILL.md`).
 
 ## Regras gerais
 
