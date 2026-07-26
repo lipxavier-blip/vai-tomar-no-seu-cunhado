@@ -1,28 +1,26 @@
 #!/usr/bin/env python3
 """
 Gera uma thumbnail 1280x720 pro YouTube: capa do episodio (borrada e
-escurecida como fundo, nitida e centralizada por cima) + titulo em letra
-grande (legivel em miniatura) + badge "EP N". Mesmo estilo visual do
-audiograma (gerar_audiograma.py) — sem brandbook proprio, so a capa do
-episodio.
+escurecida como fundo, nitida e centralizada por cima). As capas do Vai
+Tomar ja vem com titulo e marca escritos na propria arte, entao a
+thumbnail nao sobrepoe texto de titulo — so um badge pequeno "EP N".
 
 Uso:
-  python3 gerar_thumbnail.py --capa "<jpg/png>" --titulo "<titulo>" --numero "1" --saida "<png>"
+  python3 gerar_thumbnail.py --capa "<jpg/png>" --numero "1" --saida "<png>"
 """
 
 import argparse
-import textwrap
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-FONT_TITULO = Path("/System/Library/Fonts/Supplemental/Arial Bold.ttf")
+FONT_BADGE = Path("/System/Library/Fonts/Supplemental/Arial Bold.ttf")
 
 BRANCO = "#FFFFFF"
 ROXO_BADGE = "#5B2E8C"
 
 W, H = 1280, 720
-COVER_SIZE = 520
+COVER_SIZE = 660
 BLUR_RADIUS = 30
 ESCURECIMENTO = 140
 
@@ -42,17 +40,17 @@ def renderizar_fundo(capa_path: str) -> Image.Image:
     return Image.alpha_composite(fundo.convert("RGBA"), escurecedor)
 
 
-def gerar(capa_path: str, titulo: str, numero: str, saida: str):
+def gerar(capa_path: str, numero: str, saida: str):
     img = renderizar_fundo(capa_path)
 
     capa = Image.open(capa_path).convert("RGBA").resize((COVER_SIZE, COVER_SIZE))
-    cover_x = W - COVER_SIZE - 40
+    cover_x = (W - COVER_SIZE) // 2
     cover_y = (H - COVER_SIZE) // 2
     img.alpha_composite(capa, (cover_x, cover_y))
 
     draw = ImageDraw.Draw(img)
 
-    fonte_badge = ImageFont.truetype(str(FONT_TITULO), 44)
+    fonte_badge = ImageFont.truetype(str(FONT_BADGE), 44)
     badge_texto = f"EP {numero}"
     bbox = draw.textbbox((0, 0), badge_texto, font=fonte_badge)
     badge_w = bbox[2] - bbox[0] + 56
@@ -66,36 +64,15 @@ def gerar(capa_path: str, titulo: str, numero: str, saida: str):
         (badge_x + 28, badge_y + 14), badge_texto, font=fonte_badge, fill=BRANCO,
     )
 
-    largura_max_titulo = 26
-    fonte_titulo = ImageFont.truetype(str(FONT_TITULO), 96)
-    linhas = textwrap.wrap(titulo, width=largura_max_titulo, break_long_words=False)[:3]
-
-    while True:
-        alturas = [draw.textbbox((0, 0), l, font=fonte_titulo)[3] for l in linhas]
-        largura_maxima = max(draw.textbbox((0, 0), l, font=fonte_titulo)[2] for l in linhas)
-        bloco_altura = sum(alturas) + 20 * (len(linhas) - 1)
-        if largura_maxima <= W - COVER_SIZE - 140 and bloco_altura <= H - 260:
-            break
-        fonte_titulo = ImageFont.truetype(str(FONT_TITULO), fonte_titulo.size - 6)
-        if fonte_titulo.size < 48:
-            break
-
-    y = (H - bloco_altura) // 2 + 30
-    for linha in linhas:
-        draw.text((60, y), linha, font=fonte_titulo, fill=BRANCO)
-        bbox = draw.textbbox((0, 0), linha, font=fonte_titulo)
-        y += (bbox[3] - bbox[1]) + 20
-
     img.convert("RGB").save(saida, quality=95)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--capa", required=True)
-    parser.add_argument("--titulo", required=True)
     parser.add_argument("--numero", required=True)
     parser.add_argument("--saida", required=True)
     args = parser.parse_args()
 
-    gerar(args.capa, args.titulo, args.numero, args.saida)
+    gerar(args.capa, args.numero, args.saida)
     print(f"Pronto: {args.saida}")
