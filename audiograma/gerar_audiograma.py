@@ -9,6 +9,13 @@ com a capa nitida centralizada por cima. As capas do Vai Tomar ja vem com
 titulo e marca escritos na propria arte, entao o video nao sobrepoe texto
 nenhum — so capa + onda sonora.
 
+Dois modos, escolhidos automaticamente pela proporcao da capa:
+  - capa quadrada (1:1, a do Spreaker): fundo borrado + capa centralizada +
+    onda sonora embaixo. Foi assim no ep 76.
+  - capa widescreen (16:9, a feita pro YouTube): a capa ocupa o quadro inteiro
+    e a onda sonora entra sobreposta na faixa de baixo. Sem fundo borrado,
+    porque nao sobra area vazia pra preencher.
+
 Uso:
   python3 gerar_audiograma.py --audio "<mp3>" --capa "<jpg/png>" --saida "<mp4>"
 """
@@ -31,6 +38,17 @@ WAVE_ALTURA_MIN = 160
 WAVE_ALTURA_MAX = 400
 BLUR_RADIUS = 40
 ESCURECIMENTO = 130  # 0-255, opacidade da camada preta por cima do blur
+
+# Modo widescreen: capa ocupa o quadro todo, onda discreta no canto inferior direito.
+# Posicao escolhida no ep 77 depois de testar 4 variantes: no rodape inteiro a onda
+# atropela o titulo escrito na arte, e no topo ela some. O canto direito cai sobre a
+# mesa/area vazia da capa. O ganho de visualizacao existe porque fala tem amplitude
+# baixa: sem ele a onda vira um fio invisivel.
+WIDE_WAVE_W = 640
+WIDE_WAVE_H = 170
+WIDE_WAVE_X = 1870
+WIDE_WAVE_Y = 1215
+WIDE_WAVE_GANHO = "15dB"
 
 
 def ffprobe_duration(audio_path: str) -> float:
@@ -63,8 +81,45 @@ def renderizar_fundo(capa_path: str, caminho_saida: Path):
     fundo.convert("RGB").save(caminho_saida)
 
 
+def capa_e_widescreen(capa_path: str) -> bool:
+    """True quando a capa ja vem no formato do video (16:9), como a do YouTube."""
+    with Image.open(capa_path) as img:
+        proporcao = img.width / img.height
+    return proporcao > 1.5
+
+
+def gerar_widescreen(audio: str, capa: str, saida: str, duracao: float):
+    """Capa 16:9 em tela cheia, onda sonora discreta no canto inferior direito."""
+    filtro = (
+        f"[0:v]scale={CANVAS_W}:{CANVAS_H}:force_original_aspect_ratio=increase,"
+        f"crop={CANVAS_W}:{CANVAS_H}[bg];"
+        f"[1:a]volume={WIDE_WAVE_GANHO},"
+        f"showwaves=s={WIDE_WAVE_W}x{WIDE_WAVE_H}:mode=cline:colors=white:rate=30:scale=sqrt,"
+        f"format=yuva420p,colorchannelmixer=aa=0.95[wave];"
+        f"[bg][wave]overlay={WIDE_WAVE_X}:{WIDE_WAVE_Y}[outv]"
+    )
+
+    cmd = [
+        "ffmpeg", "-y",
+        "-loop", "1", "-i", capa,
+        "-i", audio,
+        "-filter_complex", filtro,
+        "-map", "[outv]", "-map", "1:a",
+        "-c:v", "libx264", "-pix_fmt", "yuv420p", "-preset", "medium", "-crf", "20",
+        "-c:a", "aac", "-b:a", "192k",
+        "-t", str(duracao),
+        saida,
+    ]
+
+    subprocess.run(cmd, check=True)
+
+
 def gerar(audio: str, capa: str, saida: str):
     duracao = ffprobe_duration(audio)
+
+    if capa_e_widescreen(capa):
+        gerar_widescreen(audio, capa, saida, duracao)
+        return
 
     fundo_png = Path(saida).with_suffix(".fundo.png")
     renderizar_fundo(capa, fundo_png)

@@ -263,6 +263,7 @@ Antes de publicar qualquer texto, pergunte:
 - [ ] É curto o suficiente para não parecer comunicado oficial?
 - [ ] Diz algo com convicção, mesmo que seja polêmico?
 - [ ] Trata o ouvinte como alguém que já faz parte da turma?
+- [ ] Não usa travessão em nenhum lugar (troque por vírgula, parênteses ou ponto)?
 
 Se sim para tudo: tá no tom certo.
 
