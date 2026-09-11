@@ -1,0 +1,756 @@
+<title>Neoetiquetas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+  :root{
+    --bg:#0d0d0d;
+    --surface:#1a1714;
+    --surface-2:#211d19;
+    --border:#2a2520;
+    --border-strong:#3a332c;
+    --fg:#f0ece4;
+    --muted:#8a8078;
+    --muted-dim:#6b6560;
+    --accent:#e85d26;
+    --accent-dim:#a8431b;
+    --font-display:"Archivo Black","Archivo Black Fallback",Impact,system-ui,sans-serif;
+    --font-body:"Archivo","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+    --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--bg);
+    color:var(--fg);
+    font-family:var(--font-body);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:940px;
+    margin:0 auto;
+    padding-inline:20px;
+    padding-block:0 72px;
+  }
+
+  /* ---------- barra fixa ---------- */
+  .bar{
+    position:sticky;
+    top:0;
+    z-index:20;
+    background:rgba(13,13,13,.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+  }
+  .bar-in{
+    max-width:940px;
+    margin:0 auto;
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .bar-mark{
+    font-family:var(--font-display);
+    font-size:13px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-right:auto;
+  }
+  .counter{
+    font-family:var(--font-mono);
+    font-size:13px;
+    color:var(--muted);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-variant-numeric:tabular-nums;
+  }
+  .counter b{color:var(--fg);font-weight:700}
+  .counter.in-band b{color:var(--accent)}
+  .dot{
+    width:7px;height:7px;border-radius:50%;
+    background:var(--muted-dim);
+    flex:none;
+  }
+  .counter.in-band .dot{background:var(--accent)}
+  .btn{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--muted);
+    background:transparent;
+    border:1px solid var(--border-strong);
+    border-radius:2px;
+    padding:6px 11px;
+    cursor:pointer;
+  }
+  .btn:hover{color:var(--fg);border-color:var(--muted)}
+  .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  /* ---------- cabeçalho ---------- */
+  header{padding-block:56px 40px;border-bottom:1px solid var(--border)}
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:12px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--accent);
+  }
+  h1{
+    font-family:var(--font-display);
+    font-size:clamp(44px,9vw,86px);
+    line-height:.94;
+    letter-spacing:-.02em;
+    margin:14px 0 0;
+    text-wrap:balance;
+  }
+  .dek{
+    max-width:62ch;
+    margin:20px 0 0;
+    color:var(--muted);
+    font-size:18px;
+  }
+
+  /* ---------- ficha de fontes ---------- */
+  .sources{
+    margin-top:32px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:1px;
+    background:var(--border);
+    border:1px solid var(--border);
+  }
+  .src{background:var(--bg);padding:16px 18px}
+  .src dt{
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--muted-dim);
+  }
+  .src dd{margin:6px 0 0;font-size:15px;line-height:1.45}
+  .src dd span{color:var(--muted);display:block;font-size:13.5px;margin-top:3px}
+
+  .warn{
+    margin-top:24px;
+    border-left:3px solid var(--accent);
+    padding:4px 0 4px 16px;
+    color:var(--muted);
+    font-size:15.5px;
+    max-width:62ch;
+  }
+  .warn b{color:var(--fg);font-weight:600}
+
+  /* ---------- blocos de seção ---------- */
+  section{padding-block:44px;border-bottom:1px solid var(--border)}
+  h2{
+    font-family:var(--font-display);
+    font-size:13px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--muted-dim);
+    margin:0 0 20px;
+  }
+  .lede{max-width:62ch;margin:0 0 18px}
+  .cue{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:3px;
+    padding:14px 16px;
+    max-width:62ch;
+  }
+  .cue-label{
+    font-family:var(--font-mono);
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:block;
+    margin-bottom:6px;
+  }
+  .cue p{margin:0;font-size:16.5px}
+
+  /* ---------- rundown ---------- */
+  .rundown{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px;background:var(--border)}
+  .item{background:var(--bg);position:relative}
+  .item.pick{background:var(--surface)}
+  .row{
+    display:grid;
+    grid-template-columns:34px 52px 1fr;
+    gap:0 14px;
+    align-items:start;
+    padding:18px 16px 18px 12px;
+  }
+  .box{
+    appearance:none;
+    width:20px;height:20px;
+    margin:2px 0 0;
+    border:1px solid var(--border-strong);
+    border-radius:3px;
+    background:var(--surface-2);
+    cursor:pointer;
+    position:relative;
+    flex:none;
+  }
+  .box:checked{background:var(--accent);border-color:var(--accent)}
+  .box:checked::after{
+    content:"";
+    position:absolute;
+    left:6px;top:2px;
+    width:5px;height:10px;
+    border:solid #0d0d0d;
+    border-width:0 2px 2px 0;
+    transform:rotate(42deg);
+  }
+  .box:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .num{
+    font-family:var(--font-mono);
+    font-size:13px;
+    color:var(--muted-dim);
+    font-variant-numeric:tabular-nums;
+    padding-top:3px;
+  }
+  .item.pick .num{color:var(--accent)}
+  .head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  h3{
+    font-family:var(--font-body);
+    font-weight:700;
+    font-size:21px;
+    line-height:1.25;
+    margin:0;
+    letter-spacing:-.01em;
+    text-wrap:balance;
+  }
+  .stamp{
+    font-family:var(--font-mono);
+    font-size:11.5px;
+    color:var(--muted-dim);
+    font-variant-numeric:tabular-nums;
+    white-space:nowrap;
+  }
+  .flag{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--accent);
+    border:1px solid var(--accent-dim);
+    border-radius:2px;
+    padding:2px 6px;
+    white-space:nowrap;
+  }
+  .body{margin-top:12px;display:flex;flex-direction:column;gap:12px;max-width:64ch}
+  .layer{display:block}
+  .layer-label{
+    font-family:var(--font-mono);
+    font-size:10.5px;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--muted-dim);
+    display:block;
+    margin-bottom:3px;
+  }
+  .layer p{margin:0;font-size:16px;line-height:1.55;color:var(--fg)}
+  .layer.mesa p{color:var(--muted)}
+  .layer.gancho{
+    border-left:2px solid var(--accent-dim);
+    padding-left:13px;
+  }
+  .layer.gancho p{font-size:16.5px}
+  .layer.gancho .layer-label{color:var(--accent)}
+
+  /* ---------- notas ---------- */
+  .notes{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;max-width:64ch}
+  .notes li{padding-left:20px;position:relative;color:var(--muted);font-size:16px}
+  .notes li::before{
+    content:"";
+    position:absolute;left:0;top:11px;
+    width:8px;height:1px;background:var(--accent);
+  }
+  .notes b{color:var(--fg);font-weight:600}
+
+  footer{padding-block:36px;color:var(--muted-dim);font-size:14px;font-family:var(--font-mono)}
+
+  @media (max-width:560px){
+    body{font-size:16px}
+    .row{grid-template-columns:28px 1fr;gap:0 11px;padding:16px 14px 16px 10px}
+    .num{display:none}
+    h3{font-size:19px}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-mark">Vai Tomar no Seu Cunhado</span>
+    <span class="counter" id="counter"><span class="dot"></span><b id="count">0</b> de 19 no ar</span>
+    <button class="btn" id="clear" type="button">Limpar</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Pauta de episódio</div>
+    <h1>As neoetiquetas</h1>
+    <p class="dek">A tecnologia não inventou a falta de educação. Ela só deixou tudo mais fácil, mais rápido e quase sempre sem consequência pra quem faz. Daí uma escritora australiana resolveu propor vinte e uma regras novas de convivência, tipo um manual de etiqueta do século XXI.</p>
+
+    <dl class="sources">
+      <div class="src">
+        <dt>Fonte primária</dt>
+        <dd>JA Westenberg<span>Ensaio "Neo-Etiquette Basics: The New Rules of Being Human", Substack, 20 de agosto de 2026</span></dd>
+      </div>
+      <div class="src">
+        <dt>Fonte secundária</dt>
+        <dd>Braincast 648<span>"As novas regras de convivência", B9, 5 de setembro de 2026. Merigo, Bia Fiorotto, Marko Mello e Ana Freitas</span></dd>
+      </div>
+      <div class="src">
+        <dt>Formato</dt>
+        <dd>Tema único<span>Felipe conduz e solta as regras uma por uma. Bruno reage. Transcrição completa em fonte-braincast-648-neoetiquetas.txt</span></dd>
+      </div>
+    </dl>
+
+    <p class="warn"><b>Creditar no ar.</b> Uma das regras da lista é justamente dar crédito à fonte. Vacilar nisso durante esse episódio específico fica muito feio.</p>
+  </header>
+
+  <section>
+    <h2>Abertura</h2>
+    <p class="lede">Entrar pelo contraste: nada disso é problema novo, é o problema velho com ferramenta melhor. Aí apresentar a autora, a lista e a proposta do episódio, que é separar o que faz sentido do que é frescura.</p>
+    <div class="cue">
+      <span class="cue-label">Primeira pergunta pro Bruno</span>
+      <p>"Bruno, se você pudesse criar uma lei, uma só, que todo mundo fosse obrigado a cumprir no celular, qual seria?"</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Rundown · marque as que entram</h2>
+    <p class="lede">São dezenove regras, não vinte e uma. A mesa do Braincast pulou algumas em voz alta e repetiu outras. O alvo é entre oito e doze: menos que isso sobra tempo, mais que isso vira leitura de lista e mata a conversa. As onze marcadas como <span class="flag">rende</span> são as que têm gancho pessoal com vocês dois. O horário é onde o assunto aparece no Braincast, se quiser ouvir antes.</p>
+
+    <ol class="rundown" id="rundown">
+
+      <li class="item" data-id="r1">
+        <div class="row">
+          <input class="box" type="checkbox" id="r1" aria-labelledby="r1t">
+          <span class="num">01</span>
+          <div>
+            <div class="head">
+              <h3 id="r1t"><label for="r1">Escreva pra quem você ama com a sua própria voz, não com a da IA</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">10:20</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Em relação íntima, o trabalho de achar as palavras faz parte da mensagem. Uma declaração, um pedido de desculpa, uma conversa difícil. O valor está em alguém ter pensado, hesitado, escrito mal, apagado e tentado de novo. A IA deixa você entregar uma mensagem emocionalmente perfeita sem ter feito o trabalho emocional correspondente.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>A Ana defendeu uma exceção: usar a IA não pra escrever, mas pra conferir se você não está sendo escroto antes de mandar. O Merigo bateu de frente e disse que prefere receber torto, porque torto gera conversa.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>"Se eu te mandasse um pedido de desculpa perfeito e você descobrisse que foi o ChatGPT que escreveu, você aceitaria ou ficaria pior?"</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r2">
+        <div class="row">
+          <input class="box" type="checkbox" id="r2" aria-labelledby="r2t">
+          <span class="num">02</span>
+          <div>
+            <div class="head">
+              <h3 id="r2t"><label for="r2">Tire o fone quando outra pessoa entra na interação</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">14:49</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Fone no caixa, fone no balcão, fone com o atendente. Quem chegou merece dez segundos de atenção sem concorrência.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>A Bia se defendeu dizendo que usa fone o tempo todo por sensibilidade a barulho e que olha no olho de quem está atendendo. O Merigo disse que é cortesia pura e comparou com óculos escuro em ambiente fechado. Terminou empatado, dois a dois.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>"Você tira o fone pra falar com a moça do caixa ou você é dos que só pausa?" Piada pronta: o cara de AirPod pedindo café enquanto grava áudio no WhatsApp.</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r3">
+        <div class="row">
+          <input class="box" type="checkbox" id="r3" aria-labelledby="r3t">
+          <span class="num">03</span>
+          <div>
+            <div class="head">
+              <h3 id="r3t"><label for="r3">Não transforme a sua conveniência em trabalho pro outro</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">21:06</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Áudio de sete minutos porque "é mais fácil". Mais fácil pra quem? Reunião que podia ser e-mail. Chave PIX mandada por áudio. Mensagem de trabalho no sábado à noite com "não precisa responder agora", que é terceirizar o trabalho mental pro outro.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>História boa: o cara no aeroporto que gravou o mesmo áudio oito vezes seguidas, regravando porque não tinha ficado bom, e o Marko contou uma por uma. Ponto da Ana: áudio força uma troca sincronizada, obriga o outro a parar o que está fazendo, e depois não dá pra buscar a informação.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>"Bruno, quantos áudios de mais de um minuto você tem sem ouvir agora?"</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r4">
+        <div class="row">
+          <input class="box" type="checkbox" id="r4" aria-labelledby="r4t">
+          <span class="num">04</span>
+          <div>
+            <div class="head">
+              <h3 id="r4t"><label for="r4">Mantenha a sua trilha sonora privada</label></h3>
+              <span class="stamp">35:24</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>JBL na praia, TikTok no volume alto no ônibus, criança com desenho no restaurante, FaceTime sem fone no transporte público.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Um motorista de ônibus de viagem avisou que era obrigatório usar fone. Uma passageira levantou a mão e disse que não tinha. Ele respondeu que então ela não ia ouvir nada.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>A disputa de JBL na praia. Vale quando você está sozinho? Onde exatamente começa a ser escroto?</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r5">
+        <div class="row">
+          <input class="box" type="checkbox" id="r5" aria-labelledby="r5t">
+          <span class="num">05</span>
+          <div>
+            <div class="head">
+              <h3 id="r5t"><label for="r5">Peça antes de adicionar alguém a um grupo</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">42:36</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Adicionar alguém é ocupar a atenção dela sem pedir licença.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>O grupo que nasce "só pra organizar o evento e depois a gente apaga" e nunca é apagado. E o pior de todos: o grupo do presente de aniversário da pessoa, com todo mundo menos ela, onde você é obrigado a pagar vinte reais por alguém de quem você nem gosta. Sair vira atestado de escroto.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>"Você já saiu de um grupo e teve que explicar? Já foi cobrado por isso?"</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r6">
+        <div class="row">
+          <input class="box" type="checkbox" id="r6" aria-labelledby="r6t">
+          <span class="num">06</span>
+          <div>
+            <div class="head">
+              <h3 id="r6t"><label for="r6">Confirmação de leitura não é intimação</label></h3>
+              <span class="stamp">47:28</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Ler não cria dever de responder na hora.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Traço azul, dois tiquinhos, e-mail com rastreio de abertura. O WhatsApp é ferramenta assíncrona, não é telefone com fio onde os dois precisam estar na linha. E tem a versão nova disso: a pessoa manda e-mail e imediatamente cobra no WhatsApp que mandou o e-mail.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Quem aqui desligou o traço azul, e por quê.</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r7">
+        <div class="row">
+          <input class="box" type="checkbox" id="r7" aria-labelledby="r7t">
+          <span class="num">07</span>
+          <div>
+            <div class="head">
+              <h3 id="r7t"><label for="r7">Quando estiver com alguém, esteja com essa pessoa</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">49:24</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Presença dividida não é presença.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Celular virado pra cima na mesa, o "pode falar, eu tô te ouvindo" enquanto olha a tela. O elogio foi pra quem avisa: "dá licença, vou deixar o celular virado porque estou esperando uma ligação". Rendeu um sub-tema ótimo sobre quantas notificações cada um deixa ligada. Um deles só deixa WhatsApp de pessoa física, grupo nenhum.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Disputa ao vivo de quem tem menos notificação ligada. Abrir o celular no ar e conferir um por um.</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r8">
+        <div class="row">
+          <input class="box" type="checkbox" id="r8" aria-labelledby="r8t">
+          <span class="num">08</span>
+          <div>
+            <div class="head">
+              <h3 id="r8t"><label for="r8">Se as pessoas não conseguem ver a câmera, não use</label></h3>
+              <span class="stamp">54:46</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Regra dos óculos inteligentes. Gravar alguém que não sabe que está sendo gravado.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Discutiram se a luzinha de aviso é suficiente e concluíram que hoje não é. E puxaram um ponto melhor ainda: o gravador de reunião virou nativo do computador, então já não aparece robozinho entrando na chamada e ninguém mais avisa que está gravando.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Você usaria um óculos com câmera? E se todo mundo usasse?</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r9">
+        <div class="row">
+          <input class="box" type="checkbox" id="r9" aria-labelledby="r9t">
+          <span class="num">09</span>
+          <div>
+            <div class="head">
+              <h3 id="r9t"><label for="r9">Não dê print de grupo privado</label></h3>
+              <span class="stamp">59:29</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Print é prova. Onde você manda o print importa tanto quanto o print.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>A Ana contou que tem três grupos que ela nunca printou na vida, e que esses são justamente os grupos pra onde ela leva coisa de fora, não de onde ela tira. Apareceu também um aviso jurídico que vale repetir: quem sofre violência e joga print na internet pode tomar processo por difamação, então o caminho é a via legal.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Existe print justificável? Interesse público vale como desculpa?</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r10">
+        <div class="row">
+          <input class="box" type="checkbox" id="r10" aria-labelledby="r10t">
+          <span class="num">10</span>
+          <div>
+            <div class="head">
+              <h3 id="r10t"><label for="r10">Não filme desconhecido no pior momento dele</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">1:04:06</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Briga na rua, acidente, casal discutindo no restaurante. A primeira coisa que aparece hoje é alguém filmando.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Admitiram exceção pra abuso policial e pra prova de crime, mas com um contraponto forte: agir é melhor que filmar. Se o cara levantou pra bater na mulher, largar o celular e entrar é mais útil que gravar.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>"Você já parou de filmar pra ajudar alguém? Ou já filmou e depois se sentiu um lixo?"</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r11">
+        <div class="row">
+          <input class="box" type="checkbox" id="r11" aria-labelledby="r11t">
+          <span class="num">11</span>
+          <div>
+            <div class="head">
+              <h3 id="r11t"><label for="r11">Criança não é conteúdo</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">1:08:26</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Criança não consente e não tem como consentir depois.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Pegadinha de assustar criança pra postar, fingir que abandonou o filho pra filmar o choro, criança de fralda exposta pra render visualização. Frase que ficou: "eu gostaria que crianças não existissem na internet".</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Território nosso, os dois são pais. Qual é a nossa regra em casa hoje, e ela já mudou desde que os dois nasceram?</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r12">
+        <div class="row">
+          <input class="box" type="checkbox" id="r12" aria-labelledby="r12t">
+          <span class="num">12</span>
+          <div>
+            <div class="head">
+              <h3 id="r12t"><label for="r12">Aponte a sua vigilância pra sua própria propriedade</label></h3>
+              <span class="stamp">1:09:04</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Sua câmera é pra sua casa, não pra rua inteira.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Câmera 360 numa haste quase no meio da rua. Grupo de bairro pedindo imagem um pro outro como se fosse acervo público. E os totens de rua com reconhecimento facial e captura de placa, que alimentam direto a base da polícia, com plaquinha avisando e ninguém se importando.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Quantas câmeras pegam a sua calçada hoje? Você sabe de quem são?</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r13">
+        <div class="row">
+          <input class="box" type="checkbox" id="r13" aria-labelledby="r13t">
+          <span class="num">13</span>
+          <div>
+            <div class="head">
+              <h3 id="r13t"><label for="r13">Não deixe a tela tirar o seu corpo do mundo</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">1:15:30</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Parar no meio da escada rolante, travar a saída do metrô, atravessar a rua no celular, ficar plantado na porta do banheiro do shopping. Nada a ver com internet, tudo a ver com noção.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>A melhor história do episódio: o cara que parou seco no meio da multidão saindo de show pra chamar Uber e, quando reclamaram, respondeu "como é que eu vou chamar meu Uber então". Emendaram em trânsito, fila dupla e gente parando pra procurar número de casa.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>O que você faz quando alguém trava a calçada na sua frente? Emenda natural pro nosso assunto favorito, que é trânsito.</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r14">
+        <div class="row">
+          <input class="box" type="checkbox" id="r14" aria-labelledby="r14t">
+          <span class="num">14</span>
+          <div>
+            <div class="head">
+              <h3 id="r14t"><label for="r14">Crédito é questão de honestidade</label></h3>
+              <span class="stamp">1:21:45</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Pegou dado, diz de onde veio. Traduziu conteúdo dos outros, cita a fonte. Não é regra de bibliografia, é caráter.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Carrossel copiado palavra por palavra de outra página, sem fonte em nenhuma das duas. E o hábito dos grandes veículos de dar a notícia de um veículo pequeno sem citar, dizendo só que "foi descoberto".</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Bom lugar pra creditar a Westenberg e o Braincast de novo, fechando a piada com a gente mesmo.</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r15">
+        <div class="row">
+          <input class="box" type="checkbox" id="r15" aria-labelledby="r15t">
+          <span class="num">15</span>
+          <div>
+            <div class="head">
+              <h3 id="r15t"><label for="r15">Faça o pequeno trabalho da civilização</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">1:24:40</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Devolver o carrinho, limpar a mesa, levar a bandeja, liberar a senha, deixar sair antes de entrar no elevador.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Duas histórias boas: o carrinho de prédio com plaquinha dizendo "me devolvam no lugar, não sei voltar sozinho", e o sujeito que reserva mesa na praça de alimentação com crachá e depois fura a fila da pizza com cara de sonso.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>"Qual é o menor trabalho de civilização que te tira do sério quando não fazem?"</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r16">
+        <div class="row">
+          <input class="box" type="checkbox" id="r16" aria-labelledby="r16t">
+          <span class="num">16</span>
+          <div>
+            <div class="head">
+              <h3 id="r16t"><label for="r16">Não anuncie uma vida que não é sua</label></h3>
+              <span class="stamp">1:31:32</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Alguém morreu, engravidou, ficou doente, terminou, perdeu o emprego. Você ficou sabendo, você não ganhou o direito de contar.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Gravidez já tem código informal, que é esperar os três meses. Morte é mais confuso, porque em algum momento todo mundo fica sabendo mesmo, e às vezes avisar poupa a pessoa enlutada de ter que repetir a notícia vinte vezes.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Já vazou notícia dos outros sem querer? Qual é a régua?</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r17">
+        <div class="row">
+          <input class="box" type="checkbox" id="r17" aria-labelledby="r17t">
+          <span class="num">17</span>
+          <div>
+            <div class="head">
+              <h3 id="r17t"><label for="r17">Deixe as pessoas abandonarem versões antigas de si mesmas</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">1:33:13</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Direito ao esquecimento aplicado a gente comum.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Tuíte de 2009 desenterrado pra cancelar alguém em 2026. James Gunn demitido da Marvel por piada velha e readmitido depois. Kevin Hart tirado do Oscar por tuíte homofóbico antigo. A distinção útil que eles acharam: lembrar não é o problema, o problema é punir pra sempre e instrumentalizar o passado só porque você não gosta da pessoa hoje.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Nós dois temos quase oitenta episódios no ar. Qual é a nossa política se alguém desenterrar um? Ideia de bloco: ouvir um trecho antigo nosso ao vivo e comentar.</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r18">
+        <div class="row">
+          <input class="box" type="checkbox" id="r18" aria-labelledby="r18t">
+          <span class="num">18</span>
+          <div>
+            <div class="head">
+              <h3 id="r18t"><label for="r18">Responda esforço humano com esforço humano</label></h3>
+              <span class="stamp">1:40:26</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>Se alguém escreveu de próprio punho, não responda com saída automática de IA.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>Passaram batido, porque acharam que era a mesma coisa da regra um. Fica aqui como reserva.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Só usar se a regra um render pouco, senão repete.</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="item" data-id="r19">
+        <div class="row">
+          <input class="box" type="checkbox" id="r19" aria-labelledby="r19t">
+          <span class="num">19</span>
+          <div>
+            <div class="head">
+              <h3 id="r19t"><label for="r19">Nunca esqueça o sistema nervoso do outro lado</label></h3>
+              <span class="flag">rende</span>
+              <span class="stamp">1:40:40</span>
+            </div>
+            <div class="body">
+              <div class="layer"><span class="layer-label">A autora</span><p>É a regra que organiza todas as outras. Atrás de cada perfil, print e vídeo viral tem alguém que sente.</p></div>
+              <div class="layer mesa"><span class="layer-label">A mesa</span><p>O design das plataformas ajuda a desumanizar. A Ana comentou o padrão de quem xinga e, quando a pessoa responde, se diz sofrido. E o Merigo fechou dizendo que em evento presencial você encontra as pessoas e percebe que não é número de view, é gente que veio.</p></div>
+              <div class="layer gancho"><span class="layer-label">Gancho</span><p>Guardar essa pro encerramento. É a única da lista que não é regra prática, é a régua das outras dezoito.</p></div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <section>
+    <h2>Encerramento</h2>
+    <p class="lede">A conclusão da mesa do B9 foi curta e serve pra gente também: não seja babaca. Bom senso, educação e passar o fio dental.</p>
+    <div class="cue">
+      <span class="cue-label">Fechamento nosso</span>
+      <p>Cada um escolhe uma regra, só uma, que quer que vire lei no Brasil amanhã. E aí cada um confessa uma regra que quebra toda semana.</p>
+    </div>
+  </section>
+
+  <section style="border-bottom:none">
+    <h2>Notas de produção</h2>
+    <ul class="notes">
+      <li><b>São dezenove, não vinte e uma.</b> A mesa avisou logo no começo que talvez não desse pra fazer todas, pulou algumas em voz alta e repetiu outras.</li>
+      <li><b>O ensaio original está atrás de paywall no Substack.</b> Sem assinar, não dá pra conferir a lista completa nem o texto exato da autora. Se der pra assinar antes de gravar, vale, porque aí a gente cita as vinte e uma com as palavras dela.</li>
+      <li><b>Não fazer as dezenove no ar.</b> Oito a doze. Acima disso o episódio vira locução de lista e a conversa morre.</li>
+      <li><b>A regra quatorze é sobre crédito.</b> Então citar a autora pelo nome e o Braincast pelo número na abertura e de novo no fim.</li>
+    </ul>
+  </section>
+
+  <footer>Pauta gerada a partir da transcrição integral do Braincast 648 · 1h51 de áudio</footer>
+</div>
+
+<script>
+  (function(){
+    var KEY = "vtnsc-neoetiquetas-picks";
+    var boxes = Array.prototype.slice.call(document.querySelectorAll(".box"));
+    var countEl = document.getElementById("count");
+    var counterEl = document.getElementById("counter");
+
+    function read(){
+      try { return JSON.parse(localStorage.getItem(KEY)) || []; }
+      catch (e) { return []; }
+    }
+    function write(ids){
+      try { localStorage.setItem(KEY, JSON.stringify(ids)); }
+      catch (e) { /* modo privado, segue sem salvar */ }
+    }
+    function paint(){
+      var n = 0;
+      boxes.forEach(function(b){
+        var item = b.closest(".item");
+        if (b.checked) { n++; item.classList.add("pick"); }
+        else { item.classList.remove("pick"); }
+      });
+      countEl.textContent = n;
+      counterEl.classList.toggle("in-band", n >= 8 && n <= 12);
+    }
+    function save(){
+      write(boxes.filter(function(b){ return b.checked; }).map(function(b){ return b.id; }));
+    }
+
+    var saved = read();
+    boxes.forEach(function(b){
+      if (saved.indexOf(b.id) !== -1) b.checked = true;
+      b.addEventListener("change", function(){ paint(); save(); });
+    });
+
+    document.getElementById("clear").addEventListener("click", function(){
+      boxes.forEach(function(b){ b.checked = false; });
+      paint(); save();
+    });
+
+    paint();
+  })();
+</script>
