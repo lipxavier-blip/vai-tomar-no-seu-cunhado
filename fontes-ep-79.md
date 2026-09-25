@@ -8,6 +8,8 @@ do episódio no Spreaker e no YouTube.
 
 - **Link pra descrição:** https://www.youtube.com/watch?v=3JKJTRoQDkw
 - **Título do vídeo:** "Caught on Camera: Loose Goats Try to Board Portland Bus!"
+- **Canal no YouTube:** KPTV FOX 12 Oregon (@Fox12oregon), e não a TriMet. Link
+  conferido no ar em 24/09/2026
 - **Origem da imagem:** câmera de segurança da TriMet, a empresa de transporte
   público de Portland (Oregon), publicada pela própria TriMet
 - **Também circulou no Instagram oficial da TriMet (@trimet)**, que é onde passou
