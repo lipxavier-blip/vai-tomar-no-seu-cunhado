@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Episódio 80 · título e descrição</title>
+<style>
+  :root{
+    --bg:#f6f3ee; --card:#ffffff; --ink:#1f1b16; --muted:#6d655b; --line:#e4ddd2;
+    --accent:#c2410c; --accent-soft:#fdebe1; --ok:#15803d;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17140f; --card:#211d17; --ink:#f3ede4; --muted:#a59b8e; --line:#3a332a;
+      --accent:#fb923c; --accent-soft:#3a2416; --ok:#4ade80;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:40px 16px 80px}
+  header p{color:var(--muted);margin:.25rem 0 0}
+  h1{font-size:1.7rem;margin:0;letter-spacing:-.01em}
+  h2{font-size:1.05rem;margin:0 0 14px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:22px}
+  .opt{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;cursor:pointer}
+  .opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+  .opt input{margin-top:5px;accent-color:var(--accent)}
+  .opt b{font-size:1.1rem;display:block}
+  .opt span{color:var(--muted);font-size:.93rem}
+  .tag{display:inline-block;font-size:.72rem;font-weight:600;color:var(--accent);border:1px solid var(--accent);border-radius:99px;padding:0 8px;margin-left:6px;vertical-align:2px}
+  input[type=text],textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .desc{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:18px;outline:none;min-height:200px}
+  .desc:focus{border-color:var(--accent)}
+  .hint{color:var(--muted);font-size:.88rem;margin:10px 0 0}
+  .q{margin-bottom:18px}
+  .q p{margin:0 0 8px;font-weight:600}
+  .q small{display:block;color:var(--muted);font-weight:400;margin-top:2px}
+  button{font:inherit;font-weight:600;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:10px 16px;cursor:pointer}
+  .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}
+  .done{color:var(--ok);font-size:.95rem}
+  .savebar{position:sticky;bottom:0;display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:22px;padding:14px 16px;background:var(--card);border:1px solid var(--accent);border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.12)}
+  .savebar button{font-size:1.05rem;padding:12px 20px}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Episódio 80 · título e descrição</h1>
+    <p>Vai Tomar no Seu Cunhado · Temporada 6 · gravado em 01/10/2026 · Felipe e Bruno, sem pauta</p>
+  </header>
+
+  <section>
+    <h2>Título</h2>
+    <label class="opt"><input type="radio" name="t" value="Agenda ONU 666" checked>
+      <div><b>Agenda ONU 666 <i class="tag">recomendo</i></b>
+      <span>Absurdo e intrigante. Sai da história do antivax, a que você guardou "há séculos" pra contar, e ninguém entende até ouvir.</span></div></label>
+    <label class="opt"><input type="radio" name="t" value="A palavra do antivacina">
+      <div><b>A palavra do antivacina</b>
+      <span>A mesma história, pelo seu fecho: os caras saindo de dia pra pregar, igual Testemunha de Jeová.</span></div></label>
+    <label class="opt"><input type="radio" name="t" value="Quase gabaritando">
+      <div><b>Quase gabaritando</b>
+      <span>A frase do Bruno sobre o exame de sangue. Curta, tem piada e só se explica no episódio.</span></div></label>
+    <label class="opt"><input type="radio" name="t" value="A Rondon virou rio">
+      <div><b>A Rondon virou rio</b>
+      <span>Literal e bem de Uberlândia, que é como o episódio abre. Funciona melhor pra quem é da cidade.</span></div></label>
+    <label class="opt"><input type="radio" name="t" value="__outro">
+      <div style="flex:1"><b>Outro</b><input type="text" id="tOutro" placeholder="Escreva o seu"></div></label>
+    <p class="hint">Fugi de três assuntos separados por vírgula, porque foi a fórmula do 79 ("Cabras, feromônios e raiz de 2").</p>
+  </section>
+
+  <section>
+    <h2>Descrição</h2>
+    <div class="desc" id="desc" contenteditable="true">Hoje não tem pauta!
+
+Ligamos o microfone e deixamos a conversa andar, do jeito que o podcast começou lá no primeiro episódio.
+
+De um headset que resiste bravamente desde 2014, passando pelos comentários de vocês e por um exame de sangue quase gabaritado, até um encontro que ninguém pediu numa praça do centro de Uberlândia. Tem até conselho de saúde que a gente não segue.
+
+Músicas:
+Chillhop Jazz Coffee Shop, por Alex Morgan (Pixabay)
+Soul of Orleans, por LOPKERJO
+Pizzicato Flow, por Vital Nominate (Pixabay)
+Funky Jazz - Cocktail Bar Music, por Alex Morgan (Pixabay)
+Outro, por prettyjohn1 (Pixabay)
+
+Sigam a gente no Instagram: @vaitomarnoseucunhado
+
+Se você tem uma história ou um comentário mais longo, envie um e-mail para vaitomarnoseucunhado@gmail.com 📬</div>
+    <p class="hint">Dá pra editar direto aqui. Segue o modelo do 78: gancho, o que o episódio é, a varredura "de X, passando por Y, até Z" sem entregar nada, e o rodapé fixo. Não citei a eleição, porque o episódio sai depois dela.</p>
+  </section>
+
+  <section>
+    <h2>Pra você responder</h2>
+    <div class="q"><p>1. Credito a intro (Close Old Son, de OTE, da Epidemic Sound)?<small>No 79 ela não foi creditada, só as faixas do Pixabay. Deixei de fora pra manter igual.</small></p>
+      <input type="text" id="q1" placeholder="Sim / não"></div>
+    <div class="q"><p>2. De onde veio a Soul of Orleans?<small>Não achei a origem nem a licença dela, só o arquivo na raiz da pasta. Se for Pixabay ou freetouse.com, completo o crédito como nas outras.</small></p>
+      <input type="text" id="q2" placeholder="Pixabay, freetouse, YouTube…"></div>
+    <div class="q"><p>3. Algum ajuste no texto?</p>
+      <textarea id="q3" rows="3" placeholder="Opcional"></textarea></div>
+  </section>
+  <div class="savebar"><button id="save">Salvar e mandar pro Claude</button><span class="done" id="ok"></span></div>
+</main>
+<script>
+  const ok = document.getElementById('ok');
+  document.getElementById('save').onclick = async () => {
+    const sel = document.querySelector('input[name=t]:checked').value;
+    const data = {
+      titulo: sel === '__outro' ? document.getElementById('tOutro').value.trim() : sel,
+      descricao: document.getElementById('desc').innerText.trim(),
+      creditar_intro: document.getElementById('q1').value.trim(),
+      origem_soul_of_orleans: document.getElementById('q2').value.trim(),
+      ajustes: document.getElementById('q3').value.trim(),
+      salvo_em: new Date().toISOString()
+    };
+    ok.textContent = 'Salvando…';
+    try {
+      const r = await fetch('/save', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)});
+      ok.textContent = r.ok ? 'Salvo. O Claude já recebeu.' : 'Erro ao salvar (' + r.status + ').';
+    } catch (e) { ok.textContent = 'Não consegui falar com o servidor local. Avise o Claude.'; }
+  };
+</script>
+</body>
+</html>
