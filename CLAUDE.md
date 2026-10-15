@@ -34,6 +34,11 @@ vai-tomar-no-seu-cunhado/
     └── learn.md         # skill para aprender sobre o podcast
 ```
 
+## Editar episódio
+
+Edição a partir das faixas do Riverside documentada na skill global `editar-episodio-vtnsc`
+(`~/.claude/skills/editar-episodio-vtnsc/SKILL.md`); scripts-modelo em `edicao/modelo/`.
+
 ## Publicar episódio
 
 Pipeline completo (descrição → Spreaker → audiograma → YouTube → site) documentado na skill
