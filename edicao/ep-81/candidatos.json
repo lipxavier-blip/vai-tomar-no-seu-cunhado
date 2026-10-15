@@ -1,0 +1,1474 @@
+[
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 0.49,
+"c1": 1.42,
+"ctx": "Fiquei, ⟦eu fiz um,⟧ eu fiz um teste, eu fiz um",
+"sobre": 0.93
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1.42,
+"c1": 3.82,
+"ctx": "Fiquei, eu fiz um, ⟦eu fiz um teste,⟧ eu fiz um teste antes de você",
+"sobre": 2.02
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 32.01,
+"c1": 32.89,
+"ctx": "com um áudio de qualidade faz, né? ⟦Às vezes,⟧ às vezes as pessoas não fazem, mas",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 32.52,
+"c1": 33.35,
+"ctx": "um áudio de qualidade faz, né? Às ⟦vezes, às⟧ vezes as pessoas não fazem, mas acontece",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 38.4,
+"c1": 38.87,
+"ctx": "é de, não é assim de propósito, ⟦⟧ não, mas acontece. Como é que você",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 53.24,
+"c1": 54.06,
+"ctx": "do possível. é o cara é foda ⟦essa⟧ essa frase essa frase de na medida",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 54.06,
+"c1": 55.23,
+"ctx": "possível. é o cara é foda essa ⟦essa frase⟧ essa frase de na medida do possível",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 58.81,
+"c1": 59.55,
+"ctx": "medida do possível é o cara pedindo ⟦⟧ ajuda de um jeito tipo estou bem",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 62.41,
+"c1": 62.94,
+"ctx": "a cabeça. É, não fi, tá, não ⟦tá,⟧ tá bom, eu não tenho que reclamar,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 86.49,
+"c1": 86.49,
+"ctx": "mas bruno é eu não sei do ⟦que⟧ que a gente vai falar hoje não",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 95.63,
+"c1": 97.51,
+"ctx": "eu preparei a pauta de hoje, preparei, ⟦eu te falei,⟧ eu te falei no WhatsApp, não a",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 103.66,
+"c1": 104.64,
+"ctx": "no WhatsApp, não a gente pode falar, ⟦eu vou me controlar,⟧ eu vou me controlar para não sair",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 130.26,
+"c1": 130.66,
+"ctx": "cara, sério, aí eu acabei de falar, ⟦⟧ ó, não tem motivo pra reclamar, não",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 147.88,
+"c1": 148.37,
+"ctx": "estão caras, isso é verdade. Exatamente. Não ⟦⟧ está. Deixa eu te falar uma coisa,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 180.85,
+"c1": 181.33,
+"ctx": "minha vez, meu salário não vale nada, ⟦é isso,⟧ é, tá de sacanagem comigo, é isso.",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 183.33,
+"c1": 183.83,
+"ctx": "é isso, é, tá de sacanagem comigo, ⟦é isso.⟧ Cala a boca. A soguinho gourmet, pah,",
+"sobre": 0.38
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 201.74,
+"c1": 202.62,
+"ctx": "o Felipe tem um padrão mais alto ⟦mas aqui⟧ mas aqui em casa observei ó vamos",
+"sobre": 0.25
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 258.7,
+"c1": 259.16,
+"ctx": "todos, né, essa aqui é a verdade, ⟦⟧ e cara, você vai no supermercado fazer",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 267.73,
+"c1": 267.95,
+"ctx": "meu filho nem é um adulto, hein, ⟦eu quero⟧ Eu quero saber, Filipe, quando o Eric",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 283.35,
+"c1": 284.01,
+"ctx": "moela e... Não quer? Sei lá, Fih, ⟦⟧ moela e uma peide frango, né, se",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 304.35,
+"c1": 305.13,
+"ctx": "fígado é... Cara, é barato, é muito... ⟦Eu acho que é,⟧ eu acho que é menos de 10",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 308.13,
+"c1": 308.58,
+"ctx": "10 reais o quilo de fígado. Mas ⟦é isso,⟧ né? Porque ninguém gosta. Quero ouvir, quero",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 310.43,
+"c1": 311.28,
+"ctx": "Mas é isso, né? Porque ninguém gosta. ⟦Quero ouvir,⟧ quero ouvir, quero ouvir aí ouvinte. Vai",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 310.82,
+"c1": 311.28,
+"ctx": "é isso, né? Porque ninguém gosta. Quero ⟦ouvir, quero⟧ ouvir, quero ouvir aí ouvinte. Vai que",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 311.28,
+"c1": 311.84,
+"ctx": "isso, né? Porque ninguém gosta. Quero ouvir, ⟦quero ouvir,⟧ quero ouvir aí ouvinte. Vai que você",
+"sobre": 0.2
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 327.78,
+"c1": 328.18,
+"ctx": "fazem, eles falam, não, tem que comer ⟦⟧ e beleza. Eu sempre odiei e nunca...",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 338.76,
+"c1": 340.74,
+"ctx": "nunca mais comi, mas a minha mãe ⟦ela gosta,⟧ ela gosta, tipo real de fígado, come,",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 382.83,
+"c1": 383.59,
+"ctx": "um amigo nosso ele gosta de fígado ⟦ele pede⟧ ele pede uma porção de fígado aí",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 406.38,
+"c1": 407.56,
+"ctx": "texturas de comida, ontem você tem noção? ⟦Eu fiz um,⟧ eu fiz um troço pra mim que",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 467.13,
+"c1": 468.51,
+"ctx": "com a manteiga e tal, mas pô, ⟦que delícia,⟧ que delícia chimejinho, uma brejinha, de quinta",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 495.45,
+"c1": 495.7,
+"ctx": "falei, eu tô vendo na TV e ⟦eu⟧ Eu vou escorregando o sofá quando eu",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 507.0,
+"c1": 507.32,
+"ctx": "entre seis e quarenta e sete aí, ⟦quando⟧ quando chegar essa hora, eu não estou",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 524.46,
+"c1": 524.9,
+"ctx": "se eu tiver que lidar com o ⟦⟧ João, mas o João Graçadeus está dormindo",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 532.31,
+"c1": 532.73,
+"ctx": "pelo menos seis e cinquenta, sete horas, ⟦⟧ é a hora que ele está acordando.",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 551.74,
+"c1": 552.69,
+"ctx": "né eu olhei assim do lado aí ⟦ele levantou⟧ ele levantou no berço ficou em pé",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 561.53,
+"c1": 561.95,
+"ctx": "e 7 mais ou menos eu falei ⟦é isso⟧ aí que eu quero é não é",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 563.48,
+"c1": 564.1,
+"ctx": "De volta. Não é, mano? E foi? ⟦É isso.⟧ A babá, no caso que você falou,",
+"sobre": 0.45
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 567.95,
+"c1": 568.55,
+"ctx": "isso aí que eu quero é não ⟦⟧ é uma Mulher que... Ai ai não,",
+"sobre": 0.6
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 568.01,
+"c1": 568.71,
+"ctx": "não é, gente? Porque você falou que ⟦a babá,⟧ a babá fica do lado da minha",
+"sobre": 0.7
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 578.9,
+"c1": 579.46,
+"ctx": "quero é não é uma Mulher que... ⟦Ai⟧ ai não, uma baba eletrônica. A câmera",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 586.1,
+"c1": 586.8,
+"ctx": "pé do seu lado da cama ali. ⟦Ai,⟧ ai. Vamo, Felipe, passou da hora já.",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 599.03,
+"c1": 600.45,
+"ctx": "Xavier. E... Vai tomar no seu cunhado! ⟦⟧ Das nossas duas casas, né? Nossa, isso",
+"sobre": 1.42
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 612.89,
+"c1": 613.32,
+"ctx": "pra trás de reféns, é, vai lá, ⟦você vai,⟧ você vai ver que eu falo que",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 635.71,
+"c1": 636.16,
+"ctx": "Das nossas duas casas, né? Nossa, isso ⟦é, isso⟧ é foda, né, cara, porque aí você",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 643.77,
+"c1": 644.24,
+"ctx": "se é o outro, se é você, ⟦⟧ aí todo mundo fala, não, aqui pra",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 650.54,
+"c1": 650.93,
+"ctx": "fala, puta, sou eu, mas que merda. ⟦⟧ E é isso, cara, e não adianta,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 650.9,
+"c1": 651.3,
+"ctx": "puta, sou eu, mas que merda. E ⟦é isso,⟧ cara, e não adianta, você xinga lá",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 652.73,
+"c1": 653.09,
+"ctx": "cara, e não adianta, você xinga lá ⟦⟧ e... Vai fazer o quê? O que",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 654.07,
+"c1": 654.31,
+"ctx": "adianta, você xinga lá e... Vai fazer ⟦o quê?⟧ O que você vai fazer? Não sei.",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 682.13,
+"c1": 682.2,
+"ctx": "seu vídeo, Então eu não sabia. O ⟦que⟧ que chega primeiro quando dá a deleia",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 728.27,
+"c1": 729.43,
+"ctx": "gente leu as histórias lá e tal, ⟦⟧ e talvez até dê uma ponte para",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 785.54,
+"c1": 786.67,
+"ctx": "da pitagoridade que eles tinham, né, então. ⟦É,⟧ é, como que você lida, Bruno, com",
+"sobre": 0.6
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 798.62,
+"c1": 799.73,
+"ctx": "tenho esses amigos, né? Tô brincando, eu ⟦tô brincando,⟧ tô brincando, tô brincando, cara, eu lido",
+"sobre": 0.41
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 799.73,
+"c1": 801.01,
+"ctx": "amigos, né? Tô brincando, eu tô brincando, ⟦tô brincando,⟧ tô brincando, cara, eu lido bem, assim,",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 810.42,
+"c1": 810.96,
+"ctx": "que estão no meu círculo de amizade, ⟦⟧ eu não costumo ficar, a gente não",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 866.52,
+"c1": 867.05,
+"ctx": "acabou com futebol não, foram as Betes. ⟦⟧ E aí Bruno, a gente tá nesse",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 873.74,
+"c1": 874.23,
+"ctx": "não sei o que você quer falar, ⟦⟧ mas a gente tá nesse momento que",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 916.03,
+"c1": 916.03,
+"ctx": "anos pra cá e você sabe o ⟦que⟧ que trouxe essa merda, cara, ninguém conversa",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 931.54,
+"c1": 932.07,
+"ctx": "ninguém conversa mais sobre, putz, essa aqui ⟦⟧ é a minha visão pra esse assunto,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 935.21,
+"c1": 935.41,
+"ctx": "vem e fala, não, essa aqui é ⟦a⟧ a visão pra, a minha visão pra",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 939.42,
+"c1": 940.15,
+"ctx": "assunto. E as pessoas trocam uma ideia ⟦⟧ e vão lá uma sede um pouco,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 941.26,
+"c1": 941.8,
+"ctx": "e vão lá uma sede um pouco, ⟦⟧ a outra lá do sede outro e",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1003.06,
+"c1": 1003.53,
+"ctx": "e tudo mais. mais. Primeiro turno. Sim. ⟦⟧ É, Felipe, eu falei que eu ia",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1111.19,
+"c1": 1111.6,
+"ctx": "dos dois lados, entendeu? Se eu sou... ⟦⟧ Ah, eu gostei do que o Flávio",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1122.81,
+"c1": 1123.83,
+"ctx": "não sei o que. E aí o ⟦posta doent, Felipe,⟧ posta doent, Felipe. O, eu quero, eu",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1139.53,
+"c1": 1140.74,
+"ctx": "eleições eu já tive vontade de postar ⟦várias coisas,⟧ várias coisas. Tipo assim, eu vi vários",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 1154.55,
+"c1": 1154.96,
+"ctx": "quiser postar ainda, eu volto e posto. ⟦E isso⟧ não aconteceu, só que hoje eu vi",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1179.89,
+"c1": 1181.39,
+"ctx": "nem robô é porque, enfim, o robô ⟦ele vai...⟧ ele vai por aquilo de quem programou",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1189.81,
+"c1": 1189.81,
+"ctx": "começa falando, ele fala metade do vídeo ⟦e⟧ é um Reels de Instagram que deve",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1193.37,
+"c1": 1193.37,
+"ctx": "deve ter, sei lá, uns cinco minutos, ⟦então⟧ Então, o alcance já é baixo, porque",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 1205.32,
+"c1": 1205.84,
+"ctx": "lado e fala, ele fala tipo assim, ⟦⟧ e se o Flávio Bolsonaro ganhasse, não",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1224.08,
+"c1": 1224.36,
+"ctx": "ele meio que põe na mesa o ⟦que⟧ que está acontecendo e ele Ele não",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1225.84,
+"c1": 1226.08,
+"ctx": "mesa o que que está acontecendo e ⟦ele⟧ Ele não fala do que as pessoas",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1354.11,
+"c1": 1354.9,
+"ctx": "que aí esse cara, o que que ⟦ele coloca?⟧ Ele coloca os riscos de cada um",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1391.13,
+"c1": 1391.26,
+"ctx": "falar num podcast o que eu acredito ⟦porque⟧ Porque a gente já falou, né? Ninguém,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 1393.0,
+"c1": 1393.67,
+"ctx": "porque Porque a gente já falou, né? ⟦⟧ Ninguém, as pessoas não conseguem pensar que",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 1394.05,
+"c1": 1394.48,
+"ctx": "porque Porque a gente já falou, né? ⟦⟧ Ninguém, as pessoas não conseguem pensar que",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 1415.09,
+"c1": 1415.53,
+"ctx": "disso, enfim, mas, cara, é bizarro, porque ⟦é isso⟧ que eu estou te falando. Eu não",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 1434.19,
+"c1": 1434.68,
+"ctx": "eu não quero entrar nessa gritaria maluca ⟦⟧ e absurda que o Brasil tá rolando,",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1452.82,
+"c1": 1453.37,
+"ctx": "o posta doent, Felipe, posta doent, Felipe. ⟦⟧ O, eu quero, eu vou só complementar,",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1521.29,
+"c1": 1521.93,
+"ctx": "voto porque ele não vai ganhar. Enfim, ⟦⟧ outra coisa que me entristece bastante é",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1564.96,
+"c1": 1565.42,
+"ctx": "nem ter começado cara você não tem ⟦a⟧ a noção da merda que você está",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1645.02,
+"c1": 1645.54,
+"ctx": "uma caminhada de, não sei quantos quilômetros, ⟦⟧ em, sei lá, em protesto, em livre,",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1650.93,
+"c1": 1650.93,
+"ctx": "favorecer um candidato. Então, tipo assim, o ⟦que⟧ que a galera quer, né? Esses candidatos",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1679.07,
+"c1": 1679.58,
+"ctx": "povo brasileiro, eles não querem saber, tipo, ⟦⟧ ah, tem mais esquerda, tem mais direito,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 1713.21,
+"c1": 1713.71,
+"ctx": "velho, puta, esse episódio tá querendo né? ⟦⟧ Ah mano... Não, só aumenta, só aumenta",
+"sobre": 0.5
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1721.48,
+"c1": 1722.25,
+"ctx": "é uma expressão, que a galera quer, ⟦eu não sei,⟧ eu não sei ser uma vontade de",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1727.11,
+"c1": 1727.11,
+"ctx": "se é carência, eu não sei o ⟦que⟧ que é, tipo o que que leva",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1727.61,
+"c1": 1727.61,
+"ctx": "sei o que que é, tipo o ⟦que⟧ que leva uma pessoa a sair, né,",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1729.81,
+"c1": 1730.32,
+"ctx": "tipo o que que leva uma pessoa ⟦⟧ a sair, né, entrar no movimento imbecil",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1753.0,
+"c1": 1753.34,
+"ctx": "das contas vai ser melhor pra quem. ⟦E⟧ é tipo assim, sempre tem quando muda",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1764.54,
+"c1": 1765.1,
+"ctx": "Facebook, muitos anos. Que eles colocavam tipo, ⟦⟧ faziam um post lá no próprio feed",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1779.52,
+"c1": 1779.52,
+"ctx": "daqui quatro anos a gente viu o ⟦que⟧ que vai mudar, muda bosta nenhuma, entendeu?",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1781.58,
+"c1": 1782.94,
+"ctx": "episódio tá querendo né? Ah mano... Não, ⟦só aumenta,⟧ só aumenta desde sempre. Em Pernambuco, não.",
+"sobre": 0.58
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1803.75,
+"c1": 1804.66,
+"ctx": "aqui que eu não, eu não tenho ⟦rede social,⟧ rede social assim, né, Instagram, eu não",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1808.7,
+"c1": 1809.4,
+"ctx": "tava usando, e aí ontem à noite ⟦a,⟧ a taís minha esposa, ela, ela tava",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1810.72,
+"c1": 1811.31,
+"ctx": "à noite a, a taís minha esposa, ⟦ela,⟧ ela tava indo dormir, ela comentou, falou",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1827.77,
+"c1": 1828.22,
+"ctx": "Tentou aqui querendo cagar a regra também ⟦⟧ e tal, mas estão sobre investigações para",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1835.84,
+"c1": 1836.25,
+"ctx": "começaram. O que se diz das matérias ⟦que eu li,⟧ que eu li bem por alto, não",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 1845.23,
+"c1": 1846.02,
+"ctx": "aqui, a corrente do fake news, não ⟦é isso,⟧ então estou te encorajando você ouvinte aí",
+"sobre": 0.79
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1853.41,
+"c1": 1854.05,
+"ctx": "é. Geralmente a gente não se importa ⟦em ser,⟧ em ser, em falar merda aqui, mas",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 1887.69,
+"c1": 1888.2,
+"ctx": "a gente... Cara, assim, então, extrema direita, ⟦⟧ é, eu acho que o bolsonarismo está",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 1908.11,
+"c1": 1909.19,
+"ctx": "o bolsonarismo é um movimento separado, velho. ⟦É isso,⟧ é isso que eu estou, por isso",
+"sobre": 0.82
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 1913.64,
+"c1": 1914.35,
+"ctx": "é um movimento separado, velho. É isso, ⟦é isso⟧ que eu estou, por isso que eu",
+"sobre": 0.21
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1919.0,
+"c1": 1919.62,
+"ctx": "não são bolsonaristas, isso é importante dizer. ⟦É,⟧ é igual lá nos Estados Unidos tem",
+"sobre": 0.62
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1926.12,
+"c1": 1926.56,
+"ctx": "separado da direita, um pouco não, né? ⟦É,⟧ é exatamente isso. Então o que se",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 1991.91,
+"c1": 1992.41,
+"ctx": "democratas e os trampistas, né? Caraca, velho. ⟦⟧ Alguém se machucou nesse rolê inteiro ou",
+"sobre": 0.5
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2018.33,
+"c1": 2018.77,
+"ctx": "ciência que, por algum motivo, a galera, ⟦⟧ é, né, que fala, trata com menos",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2148.71,
+"c1": 2149.23,
+"ctx": "esse tipo de coisa. Claro, pô. Claro. ⟦⟧ Cara, o... Aquela... Eu não lembro o",
+"sobre": 0.1
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 2154.08,
+"c1": 2154.08,
+"ctx": "Cara, o... Aquela... Eu não lembro o ⟦que⟧ que é, né? Eu falo a frase,",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 2156.96,
+"c1": 2157.8,
+"ctx": "a frase, né? Mas é real, né? ⟦o pão em circo,⟧ o pão em circo nunca foi tão",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 2228.64,
+"c1": 2229.09,
+"ctx": "tão presente nos dias de hoje, véi, ⟦é isso⟧ que acontece, porque o povo perdeu a",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 2238.22,
+"c1": 2238.49,
+"ctx": "você é fascista ou você é comunista, ⟦é isso⟧ que a galera está preocupada. O que",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 2271.24,
+"c1": 2273.23,
+"ctx": "rasga, joga fora, põe fogo, faz merda, ⟦é, os,⟧ é, os patriotas bolsonaros, né, os, enfim,",
+"sobre": 1.93
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 2280.05,
+"c1": 2280.46,
+"ctx": "enfim, é, esse tipo de coisa, véi, ⟦é,⟧ é complicado, entendeu? Isso aqui, isso pra",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 2290.42,
+"c1": 2290.42,
+"ctx": "que a esquerda nunca fez nada, é ⟦porque⟧ porque eu não me veia a mente,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2337.11,
+"c1": 2338.08,
+"ctx": "Brasil e tal. É, é foda, cara. ⟦⟧ Assim, eu estava esperando que, antes de",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2353.83,
+"c1": 2354.43,
+"ctx": "que eu estava esperando, assim, de verdade. ⟦⟧ Ah, eu acho que sim, cara, Eu",
+"sobre": 0.21
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 2354.74,
+"c1": 2355.12,
+"ctx": "trenta zoado pra todo mundo, sacou? Sério? ⟦É isso⟧ aí. Um bajinho. Um, dois, três, um...",
+"sobre": 0.07
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2401.29,
+"c1": 2401.41,
+"ctx": "-las. E aí tinha umas outras paradas ⟦e⟧ e aí eu vi de outro jeito,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2415.59,
+"c1": 2416.54,
+"ctx": "que isso aqui está escrito, é mentira. ⟦Dos dois lados,⟧ dos dois lados, que é tipo assim,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2427.99,
+"c1": 2428.15,
+"ctx": "coisa que ele fez, e você é ⟦tipo⟧ tipo assim, é 5 minutos no Google,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2503.5,
+"c1": 2503.94,
+"ctx": "sei que é votar, tipo, aí eu ⟦⟧ falei é porque uma coisa, primeiro é",
+"sobre": 0.36
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2514.74,
+"c1": 2515.14,
+"ctx": "filho e eu acho que ele precisa ⟦⟧ entender a importância disso e então eu",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2539.88,
+"c1": 2540.29,
+"ctx": "nessa eleição inclusive eu anulei vota ainda. ⟦Eu não votei.⟧ Eu não votei nos seis que tinha",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2547.36,
+"c1": 2547.42,
+"ctx": "candidato é suficiente assim que eu achava ⟦que⟧ que fazia sentido eu votar. Mas é",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2550.74,
+"c1": 2551.35,
+"ctx": "achava que que fazia sentido eu votar. ⟦⟧ Mas é parece foi um péssimo momento",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2561.87,
+"c1": 2562.61,
+"ctx": "Ahahahah, é, péssimo, mas importante também, né. ⟦⟧ O assim, eu, eu sinceramente, Felipe, é,",
+"sobre": 0.74
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 2563.92,
+"c1": 2564.07,
+"ctx": "péssimo, mas importante também, né. O assim, ⟦eu,⟧ eu sinceramente, Felipe, é, eu acho que",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2580.44,
+"c1": 2580.85,
+"ctx": "Então sim, me parece que tá claro. ⟦⟧ E aí eu queria te fazer uma",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2596.31,
+"c1": 2596.86,
+"ctx": "tipo, a gente está falando agora de, ⟦⟧ a pergunta que eu quero te fazer",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2603.0,
+"c1": 2603.12,
+"ctx": "com isso. Não é não é o ⟦que⟧ que me influenciou né. Cara eu acho",
+"sobre": 0.12
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2643.53,
+"c1": 2644.38,
+"ctx": "é uma merda e enfim foda -se ⟦cara a gente fala⟧ cara a gente fala mal e de",
+"sobre": 0.85
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2671.73,
+"c1": 2672.29,
+"ctx": "comum mas não é a mesma coisa ⟦⟧ é eu acho que o bolsonarismo é",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2680.4,
+"c1": 2680.65,
+"ctx": "talvez na política uma das piores coisas ⟦que⟧ que aconteceu nos últimos anos, porque ela",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2718.37,
+"c1": 2718.9,
+"ctx": "Ele é político, sabe? Ele sabe falar, ⟦⟧ entendeu? Ele tem um jeito de falar",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2719.06,
+"c1": 2719.52,
+"ctx": "Ele é político, sabe? Ele sabe falar, ⟦⟧ entendeu? Ele tem um jeito de falar",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2766.65,
+"c1": 2767.18,
+"ctx": "não era esse nível, sabe, de extremismo, ⟦⟧ que é o que está dominando grande",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2781.23,
+"c1": 2781.25,
+"ctx": "encabeçando isso são caras de extrema direita ⟦e⟧ é um problema, cara, é um problema.",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2785.6,
+"c1": 2785.89,
+"ctx": "A direita não pode fechar os olhos ⟦⟧ e achar que a culpa não está",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2787.38,
+"c1": 2787.81,
+"ctx": "pode fechar os olhos e achar que ⟦⟧ a culpa não está vindo de um",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2803.43,
+"c1": 2803.72,
+"ctx": "A galera vai tirar conclusões aí, né, ⟦⟧ Bruno? Mas enfim, foda -se. Se o",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 2819.3,
+"c1": 2819.82,
+"ctx": "foi muito clara, eu sou totalmente contra ⟦e⟧ é avesso a palavra, né, avesso ao",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2856.48,
+"c1": 2856.62,
+"ctx": "a gente estaria numa situação bem melhor ⟦como⟧ como país, cara. E não tá. Tá",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2858.5,
+"c1": 2858.99,
+"ctx": "melhor como como país, cara. E não ⟦tá.⟧ Tá uma merda. Tá uma merda, entendeu?",
+"sobre": 0.37
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2858.99,
+"c1": 2860.2,
+"ctx": "como como país, cara. E não tá. ⟦Tá uma merda.⟧ Tá uma merda, entendeu? Se fosse... É,",
+"sobre": 0.39
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 2930.1,
+"c1": 2930.58,
+"ctx": "tá aí desde dos anos 2000, 2002. ⟦É um,⟧ é um pastoso né, um é de",
+"sobre": 0.48
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2934.03,
+"c1": 2934.41,
+"ctx": "desde dos anos 2000, 2002. É um, ⟦⟧ é um pastoso né, um é de",
+"sobre": 0.38
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2945.7,
+"c1": 2946.31,
+"ctx": "sabe quem que vale o meu voto ⟦⟧ e enfim não não defendo não gosto",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2959.74,
+"c1": 2960.06,
+"ctx": "na merda é foda isso é foda ⟦é⟧ e uma coisa também tem duas coisas",
+"sobre": 0.32
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2996.63,
+"c1": 2997.03,
+"ctx": "é cristão cara cala a boca quem ⟦⟧ é você meu irmão para dizer que",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 3002.95,
+"c1": 3003.4,
+"ctx": "igreja né o O Felipe, vou te ⟦⟧ falar, eu conheço, eu conheço, gente, que",
+"sobre": 0.36
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 3003.4,
+"c1": 3004.08,
+"ctx": "né o O Felipe, vou te falar, ⟦eu conheço,⟧ eu conheço, gente, que fala isso, tá,",
+"sobre": 0.52
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3006.31,
+"c1": 3006.8,
+"ctx": "deus assim, tipo, é foda, cara. Então, ⟦eu também,⟧ eu também, então, tipo, cara, pelo amor",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3018.44,
+"c1": 3020.32,
+"ctx": "vem na revolução francesa. O cristianismo é ⟦muito anterior a isso,⟧ muito anterior a isso. Então, tipo assim,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3032.49,
+"c1": 3069.02,
+"ctx": "depois praticamente saca tipo não saca então ⟦a mesma coisa⟧ a mesma coisa ele tava no ele",
+"sobre": 27.13
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 3042.03,
+"c1": 3042.55,
+"ctx": "se foi no começo do ano, mas ⟦⟧ a, todos, todos eles, né, o Jair,",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 3092.79,
+"c1": 3093.4,
+"ctx": "que tem, na filial dele, então assim, ⟦e isso⟧ é zoado, além de ter quebrado família,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 3114.93,
+"c1": 3115.6,
+"ctx": "lá no alfaville É, é, empresa Valadão. ⟦⟧ É, é, é isso aí. Não, não",
+"sobre": 0.37
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3115.97,
+"c1": 3115.97,
+"ctx": "no alfaville É, é, empresa Valadão. É, ⟦é,⟧ é isso aí. Não, não não é.",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 3115.97,
+"c1": 3116.83,
+"ctx": "alfaville É, é, empresa Valadão. É, é, ⟦é isso⟧ aí. Não, não não é. Mas ele",
+"sobre": 0.13
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 3118.49,
+"c1": 3119.5,
+"ctx": "então, e velho, esse cara pode ser ⟦qualquer coisa,⟧ qualquer coisa, mas não chama ele de",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 3138.07,
+"c1": 3138.72,
+"ctx": "é um cara que eu gosto bastante, ⟦⟧ ele, eu acho que ele é de",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3141.66,
+"c1": 3142.59,
+"ctx": "que era. Esse é o problema, entendeu? ⟦Pra caramba,⟧ pra caramba. Sim, ele escreveu um livro",
+"sobre": 0.93
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 3172.93,
+"c1": 3173.41,
+"ctx": "A esquerda, por um lado, tenta fazer ⟦⟧ a questão do nada a ver. Ah,",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 3182.87,
+"c1": 3183.66,
+"ctx": "coisas de princípios cristãos, né? tipo, dando ⟦uma⟧ uma aliada no negócio, sabe? Vamos fazer",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3227.97,
+"c1": 3228.29,
+"ctx": "que chama a religião do bolsonarismo. Aham. ⟦É,⟧ é foda cara. É, putz, esse momento,",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 3234.52,
+"c1": 3235.08,
+"ctx": "como o próprio Jesus que veio, sabe? ⟦É,⟧ é três, né? Vinte dias, eu acho.",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 3243.55,
+"c1": 3244.27,
+"ctx": "sociais, eu fico meio down, assim, porque ⟦é isso,⟧ parece que ninguém, ninguém tá falando, ninguém",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 3247.31,
+"c1": 3248.12,
+"ctx": "é isso, parece que ninguém, ninguém tá ⟦⟧ falando, ninguém tá querendo conversar, entendeu, tá",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 3259.1,
+"c1": 3259.73,
+"ctx": "outro, já é na outra semana, né? ⟦⟧ É, é isso aí. Então, tipo assim,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3262.68,
+"c1": 3263.13,
+"ctx": "outro, já é na outra semana, né? ⟦É,⟧ é isso aí. Então, tipo assim, a",
+"sobre": 0.12
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 3263.13,
+"c1": 3263.52,
+"ctx": "já é na outra semana, né? É, ⟦é isso⟧ aí. Então, tipo assim, a galera tá",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 3264.7,
+"c1": 3265.37,
+"ctx": "outra semana, né? É, é isso aí. ⟦⟧ Então, tipo assim, a galera tá desesperada,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3271.86,
+"c1": 3272.44,
+"ctx": "militantes, tá todo mundo, tipo assim, puto, ⟦tem que,⟧ tem que, a esquerda tá, tem que",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3274.03,
+"c1": 3274.78,
+"ctx": "tem que, a esquerda tá, tem que ⟦virar a voto,⟧ virar a voto e a direita tá,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 3278.05,
+"c1": 3278.69,
+"ctx": "voto e a direita tá, tipo assim, ⟦⟧ chora mais que tá pouco, sabe? Tipo",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 3319.51,
+"c1": 3319.87,
+"ctx": "vinte e cinco vai ser. É, Felipe, ⟦é isso,⟧ né, véio? Eu acho que tem 55",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 3359.2,
+"c1": 3359.74,
+"ctx": "por 4 também, foi um lixo, tá? ⟦⟧ Então, vote consciente. E não, eu e",
+"sobre": 0
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 3368.37,
+"c1": 3369.41,
+"ctx": "e muito menos bolsonaristas. Mas, ah, gente, ⟦só que é um,⟧ só que é um Brasil melhor, né,",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3372.92,
+"c1": 3373.69,
+"ctx": "para falar disso, né, mas enfim, não. ⟦É,⟧ é foda. É isso, é nessa nota",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 3374.73,
+"c1": 3375.15,
+"ctx": "né, mas enfim, não. É, é foda. ⟦É isso,⟧ é nessa nota que nós vamos acabar.",
+"sobre": 0
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 3383.53,
+"c1": 3384.3,
+"ctx": "tá na, tá uma merda mesmo, né? ⟦É isso,⟧ vamos acabar? Sobe o som aí, uma",
+"sobre": 0.43
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 3386.0,
+"c1": 3386.6,
+"ctx": "né? É isso, vamos acabar? Sobe o ⟦⟧ som aí, uma música triste em Roma,",
+"sobre": 0.43
+}
+]

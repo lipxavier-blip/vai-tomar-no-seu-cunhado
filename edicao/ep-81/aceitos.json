@@ -1,0 +1,446 @@
+[
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 54.06,
+"c1": 55.23,
+"ctx": "possível. é o cara é foda essa ⟦essa frase⟧ essa frase de na medida do possível",
+"sobre": 0,
+"iso": "essa frase.",
+"antes": "é o cara é foda essa essa frase essa frase de na medida do possível",
+"depois": "é o cara é foda essa essa frase de na medida do possível",
+"perdeu": [
+"essa",
+"frase"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 180.85,
+"c1": 181.33,
+"ctx": "minha vez, meu salário não vale nada, ⟦é isso,⟧ é, tá de sacanagem comigo, é isso.",
+"sobre": 0,
+"iso": "Adei-se!",
+"antes": "Meu salário não vale nada, é isso. Tá de sacanagem comigo, é isso.",
+"depois": "Meu salário não vale nada. Tá de sacanagem comigo, é isso.",
+"perdeu": [
+"e",
+"isso"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 258.7,
+"c1": 259.16,
+"ctx": "todos, né, essa aqui é a verdade, ⟦⟧ e cara, você vai no supermercado fazer",
+"sobre": 0,
+"iso": "Eee...",
+"antes": "barate todos, né? Essa aqui é a verdade. E cara, você vai no supermercado fazer uma compra da semana.",
+"depois": "de todos, né? Essa aqui é a verdade. E cara, você vai no supermercado fazer uma compra da semana.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 338.76,
+"c1": 340.74,
+"ctx": "nunca mais comi, mas a minha mãe ⟦ela gosta,⟧ ela gosta, tipo real de fígado, come,",
+"sobre": 0,
+"iso": "Ela gosta.",
+"antes": "nunca mais comi mas a minha mãe ela gosta ela gosta tipo real de",
+"depois": "nunca mais comi mas a minha mãe ela gosta tipo real de",
+"perdeu": [
+"ela",
+"gosta"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 382.83,
+"c1": 383.59,
+"ctx": "um amigo nosso ele gosta de fígado ⟦ele pede⟧ ele pede uma porção de fígado aí",
+"sobre": 0,
+"iso": "",
+"antes": "nosso, ele gosta de fígado, ele pede, ele pede uma porção de fígado, aí véi.",
+"depois": "nosso, ele gosta de fígado, ele pede uma porção de fígado. Aí véi.",
+"perdeu": [
+"ele",
+"pede"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 406.38,
+"c1": 407.56,
+"ctx": "texturas de comida, ontem você tem noção? ⟦Eu fiz um,⟧ eu fiz um troço pra mim que",
+"sobre": 0,
+"iso": "Eu fiz um...",
+"antes": "comida ontem você tem noção eu fiz um eu fiz um troço para mim que é um bagulho de",
+"depois": "comida ontem você tem noção eu fiz um troço para mim que é um bagulho de",
+"perdeu": [
+"eu",
+"fiz",
+"um"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 467.13,
+"c1": 468.51,
+"ctx": "com a manteiga e tal, mas pô, ⟦que delícia,⟧ que delícia chimejinho, uma brejinha, de quinta",
+"sobre": 0,
+"iso": "Toma aqui delícia!",
+"antes": "com a manteiga e tal. Mas pô, que delícia! Que delícia! Chimejinho! Uma brejinha!",
+"depois": "com a manteiga e tal. Mas pô, que delícia. Chimejinho. Uma brejinha.",
+"perdeu": [
+"que",
+"delicia"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 561.53,
+"c1": 561.95,
+"ctx": "e 7 mais ou menos eu falei ⟦é isso⟧ aí que eu quero é não é",
+"sobre": 0,
+"iso": "é isso.",
+"antes": "7 e 7 mais ou menos. Eu falei, é isso aí que eu quero.",
+"depois": "7 e 7 mais ou menos. Eu falei que eu quero.",
+"perdeu": [
+"e",
+"isso",
+"ai"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 650.54,
+"c1": 650.93,
+"ctx": "fala, puta, sou eu, mas que merda. ⟦⟧ E é isso, cara, e não adianta,",
+"sobre": 0,
+"iso": "",
+"antes": "a puta sou eu mas que merda e é isso cara e não adianta você xinga lá e",
+"depois": "a puta sou eu mas que merda e é isso cara e não adianta você xinga lá e",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 654.07,
+"c1": 654.31,
+"ctx": "adianta, você xinga lá e... Vai fazer ⟦o quê?⟧ O que você vai fazer? Não sei.",
+"sobre": 0,
+"iso": "Ok.",
+"antes": "Não adianta, você xinga lá e vai fazer o que? O que você vai fazer? Não sei.",
+"depois": "Não adianta, você xinga lá e vai fazer o que você vai fazer? Não sei.",
+"perdeu": [
+"o",
+"que"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 728.27,
+"c1": 729.43,
+"ctx": "gente leu as histórias lá e tal, ⟦⟧ e talvez até dê uma ponte para",
+"sobre": 0,
+"iso": "Eeeeeee...",
+"antes": "a gente leu as histórias lá e tal e talvez até...",
+"depois": "a gente leu as histórias lá e tal, talvez até...",
+"perdeu": [
+"e"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 810.42,
+"c1": 810.96,
+"ctx": "que estão no meu círculo de amizade, ⟦⟧ eu não costumo ficar, a gente não",
+"sobre": 0,
+"iso": "",
+"antes": "círculo de amizade, eu não costumo ficar...",
+"depois": "círculo de amizade, é... Eu não costumo ficar...",
+"perdeu": [],
+"ganhou": [
+"e"
+]
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1139.53,
+"c1": 1140.74,
+"ctx": "eleições eu já tive vontade de postar ⟦várias coisas,⟧ várias coisas. Tipo assim, eu vi vários",
+"sobre": 0,
+"iso": "Várias coisas.",
+"antes": "Eu já tive vontade de postar várias coisas, várias coisas. Tipo, você ouvi vários vídeos...",
+"depois": "Eu já tive vontade de postar várias coisas. Tipo, você ouvi vários vídeos.",
+"perdeu": [
+"varias",
+"coisas"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1179.89,
+"c1": 1181.39,
+"ctx": "nem robô é porque, enfim, o robô ⟦ele vai...⟧ ele vai por aquilo de quem programou",
+"sobre": 0,
+"iso": "Ele vai...",
+"antes": "nem roubou é porque enfim roubou ele vai ele vai por aquilo de quem programou ele",
+"depois": "nem roubou é porque enfim roubou ele vai por aquilo de quem programou ele",
+"perdeu": [
+"ele",
+"vai"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1521.29,
+"c1": 1521.93,
+"ctx": "voto porque ele não vai ganhar. Enfim, ⟦⟧ outra coisa que me entristece bastante é",
+"sobre": 0,
+"iso": "Êêê",
+"antes": "de um voto porque não vai ganhar. Enfim, outra coisa que me entriste...",
+"depois": "de um voto porque não vai ganhar. Enfim, outra coisa que me entriste...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1729.81,
+"c1": 1730.32,
+"ctx": "tipo o que que leva uma pessoa ⟦⟧ a sair, né, entrar no movimento imbecil",
+"sobre": 0,
+"iso": "Ah...",
+"antes": "Tipo, o que leva uma pessoa a sair, entrar no movimento?",
+"depois": "Tipo, o que leva uma pessoa a sair, entrar no movimento?",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 1835.84,
+"c1": 1836.25,
+"ctx": "começaram. O que se diz das matérias ⟦que eu li,⟧ que eu li bem por alto, não",
+"sobre": 0,
+"iso": "que eu li.",
+"antes": "começaram. O que se diz das matérias que eu li, que eu li bem por alto, não entrei a fundo e também não",
+"depois": "começaram. O que se diz das matérias que eu li bem por alto não entrei a fundo e também não",
+"perdeu": [
+"que",
+"eu",
+"li"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 1887.69,
+"c1": 1888.2,
+"ctx": "a gente... Cara, assim, então, extrema direita, ⟦⟧ é, eu acho que o bolsonarismo está",
+"sobre": 0,
+"iso": "ÉÉÉÉÉÉÉÉÉÉÉÉ",
+"antes": "Então, extrema direita, eu acho que o Bolsonaro está dentro da extrema direita, mas...",
+"depois": "Então, extrema direita, eu acho que o Bolsonaro está dentro da extrema direita, mas...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2018.33,
+"c1": 2018.77,
+"ctx": "ciência que, por algum motivo, a galera, ⟦⟧ é, né, que fala, trata com menos",
+"sobre": 0,
+"iso": "É...",
+"antes": "Por algum motivo, a galera trata com menos importância.",
+"depois": "Por algum motivo, a galera trata com menos importância.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2337.11,
+"c1": 2338.08,
+"ctx": "Brasil e tal. É, é foda, cara. ⟦⟧ Assim, eu estava esperando que, antes de",
+"sobre": 0,
+"iso": "Eeeeeee...",
+"antes": "É, é foda cara. Assim, eu tava esperando que...",
+"depois": "É, é foda cara. Assim, eu tava esperando que...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 2415.59,
+"c1": 2416.54,
+"ctx": "que isso aqui está escrito, é mentira. ⟦Dos dois lados,⟧ dos dois lados, que é tipo assim,",
+"sobre": 0,
+"iso": "dos dois lados.",
+"antes": "todo mundo sabe que isso aqui está escrito é mentira dos dois lados dos dois lados que tipo assim tentando",
+"depois": "todo mundo sabe que isso aqui está escrito é mentira dos dois lados que tipo assim tentando",
+"perdeu": [
+"dos",
+"dois",
+"lados"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2514.74,
+"c1": 2515.14,
+"ctx": "filho e eu acho que ele precisa ⟦⟧ entender a importância disso e então eu",
+"sobre": 0,
+"iso": "",
+"antes": "Eu estou criando um filho e eu acho que ele precisa entender a importância disso.",
+"depois": "Eu estou criando um filho e eu acho que ele precisa entender a importância disso.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2580.44,
+"c1": 2580.85,
+"ctx": "Então sim, me parece que tá claro. ⟦⟧ E aí eu queria te fazer uma",
+"sobre": 0,
+"iso": "E...",
+"antes": "Sim, me parece que está claro. E aí eu queria te fazer uma pergunta na real.",
+"depois": "Sim, me parece que está claro. E aí eu queria te fazer uma pergunta na real.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2671.73,
+"c1": 2672.29,
+"ctx": "comum mas não é a mesma coisa ⟦⟧ é eu acho que o bolsonarismo é",
+"sobre": 0,
+"iso": "Eeeem...",
+"antes": "mas não é a mesma coisa.",
+"depois": "mas não é a mesma coisa.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2945.7,
+"c1": 2946.31,
+"ctx": "sabe quem que vale o meu voto ⟦⟧ e enfim não não defendo não gosto",
+"sobre": 0,
+"iso": "E...",
+"antes": "que valem o meu voto. E enfim, não, não defendo.",
+"depois": "que valem o meu voto. Enfim, não, não defendo.",
+"perdeu": [
+"e"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 3006.31,
+"c1": 3006.8,
+"ctx": "deus assim, tipo, é foda, cara. Então, ⟦eu também,⟧ eu também, então, tipo, cara, pelo amor",
+"sobre": 0,
+"iso": "Eu também, eu...",
+"antes": "cara então eu também eu também então tipo cara pelo amor de deus velho",
+"depois": "cara então eu também então tipo cara pelo amor de deus velho",
+"perdeu": [
+"eu",
+"tambem"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 3118.49,
+"c1": 3119.5,
+"ctx": "então, e velho, esse cara pode ser ⟦qualquer coisa,⟧ qualquer coisa, mas não chama ele de",
+"sobre": 0,
+"iso": "qualquer coisa ficou.",
+"antes": "E vei, esse cara pode ser qualquer coisa, qualquer coisa, mas não chama ele de crente não, vei.",
+"depois": "E vei, esse cara pode ser qualquer coisa, mas não chama ele de crente não, vei.",
+"perdeu": [
+"qualquer",
+"coisa"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 3259.1,
+"c1": 3259.73,
+"ctx": "outro, já é na outra semana, né? ⟦⟧ É, é isso aí. Então, tipo assim,",
+"sobre": 0,
+"iso": "É...",
+"antes": "Já é na outra semana, né?",
+"depois": "Já é na outra semana, né?",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 3264.7,
+"c1": 3265.37,
+"ctx": "outra semana, né? É, é isso aí. ⟦⟧ Então, tipo assim, a galera tá desesperada,",
+"sobre": 0,
+"iso": "Eeeeeee...",
+"antes": "É, é isso aí. Então tipo assim, a galera tá...",
+"depois": "É isso aí. Então, tipo assim, a galera tá...",
+"perdeu": [
+"e"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 3278.05,
+"c1": 3278.69,
+"ctx": "voto e a direita tá, tipo assim, ⟦⟧ chora mais que tá pouco, sabe? Tipo",
+"sobre": 0,
+"iso": "Eeeeee...",
+"antes": "e a direita tá, tipo assim, chora mais que tá pouco, sabe?",
+"depois": "e a direita tá, tipo assim, chora mais que tá pouco, sabe?",
+"perdeu": [],
+"ganhou": []
+}
+]

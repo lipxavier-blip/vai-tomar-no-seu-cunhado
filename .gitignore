@@ -2,3 +2,10 @@
 node_modules/
 .env
 .env.local
+
+# edição: áudio e intermediários ficam fora do git
+edicao/**/*.wav
+edicao/**/*.mp3
+edicao/**/*.npy
+edicao/**/aprovacao/
+edicao/**/*.log

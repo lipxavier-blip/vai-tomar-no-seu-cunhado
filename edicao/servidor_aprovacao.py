@@ -1,11 +1,18 @@
 """Serve uma página de aprovação e grava o que o Felipe salvar.
 Uso: python3 servidor_aprovacao.py <pagina.html> <saida.json> [porta]"""
-import http.server, json, os, sys
+import http.server, json, mimetypes, os, sys, urllib.parse
 page, out = os.path.abspath(sys.argv[1]), os.path.abspath(sys.argv[2])
 port = int(sys.argv[3]) if len(sys.argv) > 3 else 8790
 
 class H(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
+        # arquivos ao lado da página (áudio das prévias etc.); "/" é a página
+        rel = urllib.parse.unquote(self.path.split('?')[0]).lstrip('/')
+        f = os.path.realpath(os.path.join(os.path.dirname(page), rel))
+        if rel and f.startswith(os.path.dirname(page) + os.sep) and os.path.isfile(f):
+            body = open(f, 'rb').read(); self.send_response(200)
+            self.send_header('Content-Type', mimetypes.guess_type(f)[0] or 'application/octet-stream')
+            self.send_header('Content-Length', str(len(body))); self.end_headers(); self.wfile.write(body); return
         body = open(page, 'rb').read()
         self.send_response(200); self.send_header('Content-Type', 'text/html; charset=utf-8')
         self.send_header('Content-Length', str(len(body))); self.end_headers(); self.wfile.write(body)
