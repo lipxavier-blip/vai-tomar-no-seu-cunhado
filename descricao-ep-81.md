@@ -1,9 +1,9 @@
 # Descrição — Episódio 81
 
-**Título:** Pisando em ovos
+**Título:** Tempos difíceis
 **Temporada 6**, gravado em ~12/10/2026, Felipe e Bruno, uma semana depois do primeiro turno. Aprovado pelo Felipe em 16/10/2026
 (salvo pela página `descricao-ep-81.html`; resposta bruta em `descricao-ep-81-aprovada.json`). O Felipe tirou o parágrafo
-da varredura ("De um fígado acebolado...") de propósito. O título veio vazio no segundo save; vale o "Pisando em ovos" do primeiro.
+da varredura ("De um fígado acebolado...") de propósito. O título veio vazio no segundo save; o Felipe definiu "Tempos difíceis" no chat (frase dele aos 53:43), no lugar das opções da página.
 
 Texto pra colar no Spreaker e no YouTube:
 
