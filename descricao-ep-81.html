@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Episódio 81 · título e descrição</title>
+<style>
+  :root{
+    --bg:#f6f3ee; --card:#ffffff; --ink:#1f1b16; --muted:#6d655b; --line:#e4ddd2;
+    --accent:#c2410c; --accent-soft:#fdebe1; --ok:#15803d;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17140f; --card:#211d17; --ink:#f3ede4; --muted:#a59b8e; --line:#3a332a;
+      --accent:#fb923c; --accent-soft:#3a2416; --ok:#4ade80;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+  main{max-width:760px;margin:0 auto;padding:40px 16px 80px}
+  header p{color:var(--muted);margin:.25rem 0 0}
+  h1{font-size:1.7rem;margin:0;letter-spacing:-.01em}
+  h2{font-size:1.05rem;margin:0 0 14px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+  section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-top:22px}
+  .opt{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;cursor:pointer}
+  .opt:has(input:checked){border-color:var(--accent);background:var(--accent-soft)}
+  .opt input{margin-top:5px;accent-color:var(--accent)}
+  .opt b{font-size:1.1rem;display:block}
+  .opt span{color:var(--muted);font-size:.93rem}
+  .tag{display:inline-block;font-size:.72rem;font-weight:600;color:var(--accent);border:1px solid var(--accent);border-radius:99px;padding:0 8px;margin-left:6px;vertical-align:2px}
+  input[type=text],textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .desc{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:18px;outline:none;min-height:200px}
+  .desc:focus{border-color:var(--accent)}
+  .hint{color:var(--muted);font-size:.88rem;margin:10px 0 0}
+  .q{margin-bottom:18px}
+  .q p{margin:0 0 8px;font-weight:600}
+  .q small{display:block;color:var(--muted);font-weight:400;margin-top:2px}
+  button{font:inherit;font-weight:600;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:10px 16px;cursor:pointer}
+  .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:14px}
+  .done{color:var(--ok);font-size:.95rem}
+  .savebar{position:sticky;bottom:0;display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:22px;padding:14px 16px;background:var(--card);border:1px solid var(--accent);border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.12)}
+  .savebar button{font-size:1.05rem;padding:12px 20px}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Episódio 81 · título e descrição</h1>
+    <p>Vai Tomar no Seu Cunhado · Temporada 6 · gravado em 12/10/2026, depois do primeiro turno · Felipe e Bruno</p>
+  </header>
+
+  <section>
+    <h2>Título</h2>
+    <label class="opt"><input type="radio" name="t" value="Pisando em ovos" checked>
+      <div><b>Pisando em ovos <i class="tag">recomendo</i></b>
+      <span>A sua frase no fim ("a gente está aqui pisando em ovos pra falar disso"). Avisa que o assunto é delicado sem dizer qual, e é o clima do episódio inteiro.</span></div></label>
+    <label class="opt"><input type="radio" name="t" value="Merdas diferentes">
+      <div><b>Merdas diferentes</b>
+      <span>Do seu "vão ser merdas diferentes, mas vão ser merda igual". É a cara do podcast, mas entrega a sua conclusão sobre o segundo turno.</span></div></label>
+    <label class="opt"><input type="radio" name="t" value="Pão e circo">
+      <div><b>Pão e circo</b>
+      <span>A imagem do Bruno, com o Coliseu. Clássica, um pouco mais séria que o normal do Vai Tomar.</span></div></label>
+    <label class="opt"><input type="radio" name="t" value="Vote consciente">
+      <div><b>Vote consciente</b>
+      <span>A frase final do Bruno. Direta, funciona bem até o dia 25, mas soa como campanha do TSE.</span></div></label>
+    <label class="opt"><input type="radio" name="t" value="__outro">
+      <div style="flex:1"><b>Outro</b><input type="text" id="tOutro" placeholder="Escreva o seu"></div></label>
+    <p class="hint">O episódio sai antes do segundo turno (25/10), então dá pra citar a eleição sem envelhecer na semana.</p>
+  </section>
+
+  <section>
+    <h2>Descrição</h2>
+    <div class="desc" id="desc" contenteditable="true">Hoje o papo é sério!
+
+Uma semana depois do primeiro turno, a gente resolveu falar de eleição. E não, ninguém vai dizer em quem vota.
+
+De um fígado acebolado que ninguém pediu, passando por pão e circo e por um provedor de internet que merece um processo, até a pergunta que o Bruno guardava pro Felipe desde 2018. Esse episódio tem até os pitagóricos de volta.
+
+Músicas:
+Close Old Son, por OTE (Epidemic Sound)
+Chillhop Jazz Coffee Shop, por Alex Morgan (Pixabay)
+Soul of Orleans, por LOPKERJO
+Sad LoFi, por prettyjohn1 (Pixabay)
+Lo-fi Music Loop - Sentimental Jazzy Love, por Sonican (Pixabay)
+Lofi Study Rainy Night, por Alex Morgan (Pixabay)
+Calm, por Lite Saturation
+Love by Grace, por Lara Fabian
+
+Sigam a gente no Instagram: @vaitomarnoseucunhado
+
+Se você tem uma história ou um comentário mais longo, envie um e-mail para vaitomarnoseucunhado@gmail.com 📬</div>
+    <p class="hint">Dá pra editar direto aqui. Segue o modelo do 78: gancho, o que o episódio é, a varredura "de X, passando por Y, até Z" sem entregar nada, e o rodapé fixo. Deixei o incêndio da UFPE e o 8 de janeiro de fora da varredura, porque com esses dois a descrição pesava demais.</p>
+  </section>
+
+  <section>
+    <h2>Pra você responder</h2>
+    <div class="q"><p>1. A Sentimental Jazzy Love sai como "Sonican" ou com o nome real, Dvir Silverstone?<small>No TQT 12 saiu com o nome real. Aqui deixei o usuário do Pixabay, como nas outras faixas do Vai Tomar.</small></p>
+      <input type="text" id="q1" placeholder="Sonican / Dvir Silverstone"></div>
+    <div class="q"><p>2. De onde veio a Calm, da Lite Saturation?<small>Está no Soundtrack/ desde out/2025, sem certificado do lado. Se lembrar a fonte, completo o crédito; se não, ela fica como a Soul of Orleans: claim nela não se contesta.</small></p>
+      <input type="text" id="q2" placeholder="Pixabay, YouTube, não lembro…"></div>
+    <div class="q"><p>3. Algum ajuste no texto?</p>
+      <textarea id="q3" rows="3" placeholder="Opcional"></textarea></div>
+  </section>
+  <div class="savebar"><button id="save">Salvar e mandar pro Claude</button><span class="done" id="ok"></span></div>
+</main>
+<script>
+  const ok = document.getElementById('ok');
+  document.getElementById('save').onclick = async () => {
+    const sel = document.querySelector('input[name=t]:checked').value;
+    const data = {
+      titulo: sel === '__outro' ? document.getElementById('tOutro').value.trim() : sel,
+      descricao: document.getElementById('desc').innerText.trim(),
+      nome_sonican: document.getElementById('q1').value.trim(),
+      origem_calm: document.getElementById('q2').value.trim(),
+      ajustes: document.getElementById('q3').value.trim(),
+      salvo_em: new Date().toISOString()
+    };
+    ok.textContent = 'Salvando…';
+    try {
+      const r = await fetch('/save', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)});
+      ok.textContent = r.ok ? 'Salvo. O Claude já recebeu.' : 'Erro ao salvar (' + r.status + ').';
+    } catch (e) { ok.textContent = 'Não consegui falar com o servidor local. Avise o Claude.'; }
+  };
+</script>
+</body>
+</html>

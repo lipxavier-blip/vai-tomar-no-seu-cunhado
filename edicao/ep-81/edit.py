@@ -14,7 +14,7 @@ S_ = lambda t: int(round(t * 44100))
 
 # ---- tempos na linha do tempo do Riverside (segundos) ----
 START, END = 39.85, 3397.3              # começa no "Como é que você tá, Bruno?"; termina depois do tchau do Bruno
-CUTS = [(601.65, 606.35)]             # "Ô Felipe, travou tudo aqui enquanto falava junto": volta no "Vou te falar, viu" (pedido do Felipe)
+CUTS = [(601.65, 606.35), (2609.45, 2611.65)]             # "Ô Felipe, travou tudo aqui enquanto falava junto": volta no "Vou te falar, viu" (pedido do Felipe); silêncio de 2,8 s depois do "o Jair é foda, né?" (42:18 do corte 2): corta 2,2 s
 FINOS = [
     (54.06, 55.23, "repetição: essa frase"),
     (180.85, 181.33, "é isso: é isso,"),
