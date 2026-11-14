@@ -1,0 +1,335 @@
+[
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 227.41,
+"c1": 228.24,
+"ctx": "pff, que tá, tô fazendo bastante isso. ⟦⟧ É, bora começar então Bruno, Bruno, você",
+"sobre": 0,
+"iso": "Eeeeeee...",
+"antes": "Bora começar então, Bruno.",
+"depois": "Vamos começar então, Bruno?",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 332.0,
+"c1": 332.56,
+"ctx": "assim, os cara não tem, enfim cara, ⟦⟧ a gente falou no episódio passado, eu",
+"sobre": 0,
+"iso": "e aí",
+"antes": "cara não tem enfim cara é a gente falou no episódio passado eu não quero ficar falando disso também",
+"depois": "cara não tem enfim cara a gente falou no episódio passado eu não quero ficar falando disso também",
+"perdeu": [
+"e"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 538.86,
+"c1": 540.03,
+"ctx": "Bruno Resente. Vai tomar no seu cunhado! ⟦⟧ Oi, é verdade. É isso aí, ó.",
+"sobre": 0,
+"iso": "",
+"antes": "Mano seu cunhado!",
+"depois": "Mano seu cunhão!",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 665.23,
+"c1": 665.96,
+"ctx": "desse universo e a interagir conosco também. ⟦É isso.⟧ Eu dei uma gaguejada, né, Felipe? A",
+"sobre": 0,
+"iso": "É isso.",
+"antes": "e a interagir conosco também. É isso. Eu dei uma gaguejada",
+"depois": "e interagir conosco também. Eu dei uma gaguejada",
+"perdeu": [
+"a",
+"e",
+"isso"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 843.57,
+"c1": 843.97,
+"ctx": "que você pode olhar também, mas caraca, ⟦é isso.⟧ Então tá, eu vou ler e você",
+"sobre": 0,
+"iso": "É isso.",
+"antes": "Caraca, é isso. Então tá, eu vou ler e...",
+"depois": "Caraca, então tá, eu vou ler e...",
+"perdeu": [
+"e",
+"isso"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 863.87,
+"c1": 864.38,
+"ctx": "não, como que fala? Ou vinte acido, ⟦é isso⟧ aí. O GLIR diz assim, no episódio",
+"sobre": 0,
+"iso": "AAC.",
+"antes": "é ouvinte acido é isso aí ou o geliz diz assim",
+"depois": "é ouvinte acido ou o geliz diz assim",
+"perdeu": [
+"e",
+"isso",
+"ai"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1178.16,
+"c1": 1178.7,
+"ctx": "diferente da maioria da população brasileira. Por ⟦que⟧ que é gelir mesmo? Você já falou",
+"sobre": 0,
+"iso": "Por que...",
+"antes": "Por que que que é gelir mesmo? Você já falou isso alguma coisa?",
+"depois": "O que que é gelir mesmo? Você já falou isso alguma coisa?",
+"perdeu": [
+"que"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1747.14,
+"c1": 1747.83,
+"ctx": "abrindo um por um aqui, é verdade. ⟦⟧ Esse comentário aqui da Patrícia no episódio",
+"sobre": 0,
+"iso": "Eeeh...",
+"antes": "Esse comentário aqui da Patrícia.",
+"depois": "Esse comentário aqui da Patrícia...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 1983.75,
+"c1": 1984.39,
+"ctx": "ele ele tá mais como que diz ⟦⟧ é e aí velho como fala ele",
+"sobre": 0,
+"iso": "e-e-e-em",
+"antes": "Ele está mais, como que diz? Ai vei, como fala?",
+"depois": "Ele está mais, como que diz? Ai vei, como fala?",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 2004.06,
+"c1": 2004.62,
+"ctx": "nada aí, homo, por favor. É isso, ⟦é isso⟧ aí. Passa rápido. Assim, passa rápido, só",
+"sobre": 0,
+"iso": "Aêêêê!",
+"antes": "É isso aí.",
+"depois": "É isso.",
+"perdeu": [
+"isso"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 2165.14,
+"c1": 2165.82,
+"ctx": "mim mesmo, ai ta bom Bruno, Bruno, ⟦é isso.⟧ Bruno, do que você quer falar agora?",
+"sobre": 0,
+"iso": "Eis!",
+"antes": "Aí tá bom Bruno, é isso. Bruno, do que você quer falar?",
+"depois": "Aí tá bom Bruno. Bruno do que você quer falar?",
+"perdeu": [
+"e",
+"isso"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "repetição",
+"c0": 2273.1,
+"c1": 2273.88,
+"ctx": "por muitos anos e aí em março ⟦desse ano,⟧ desse ano lê -se em 2026, eu",
+"sobre": 0,
+"iso": "desse ano.",
+"antes": "desempreza por muitos anos e aí em março desse ano, desse ano lese 2026.",
+"depois": "desempreza por muitos anos e aí em março desse ano lese 2026.",
+"perdeu": [
+"desse",
+"ano"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2473.77,
+"c1": 2474.35,
+"ctx": "aqui, vou arrombar, escuto, pode querer, boa. ⟦⟧ Aí eu não sei se foi exatamente",
+"sobre": 0,
+"iso": "Eeeh...",
+"antes": "Boa. Eu não sei se foi exatamente...",
+"depois": "Boa. Aí eu não sei se foi exatamente...",
+"perdeu": [],
+"ganhou": [
+"ai"
+]
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 2542.4,
+"c1": 2542.93,
+"ctx": "tomar no seu cu, sou eu, entendeu? ⟦É isso.⟧ E eu faço isso em aplicativos e",
+"sobre": 0,
+"iso": "Ace!",
+"antes": "no seu curso, eu, entendeu? É isso. E eu faço isso em aplicativos e ensaios.",
+"depois": "no seu curso, eu, entendeu? E eu faço isso em aplicativos e ensaios.",
+"perdeu": [
+"e",
+"isso"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 2573.36,
+"c1": 2574.21,
+"ctx": "O tom de voz, é muito bem, ⟦é isso.⟧ Eu fico o dia inteiro inclusive decidindo",
+"sobre": 0,
+"iso": "É isso.",
+"antes": "Muito bem. É isso. Eu fico o dia inteiro inclusive.",
+"depois": "Muito bem. Eu fico o dia inteiro inclusive.",
+"perdeu": [
+"e",
+"isso"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 2593.81,
+"c1": 2594.4,
+"ctx": "você vai escrever tá, entendeu? É, acho, ⟦é isso.⟧ Mas quem tem poder tem, né, Felipe?",
+"sobre": 0,
+"iso": "É isso.",
+"antes": "É isso. A quem tem poder tem, né?",
+"depois": "A quem tem poder tem, né?",
+"perdeu": [
+"isso",
+"a"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2708.03,
+"c1": 2708.55,
+"ctx": "liga para essas coisas eita machucou ali ⟦⟧ não sei o que aconteceu descobrirei em",
+"sobre": 0,
+"iso": "",
+"antes": "",
+"depois": "",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2714.7,
+"c1": 2715.25,
+"ctx": "sei o que aconteceu descobrirei em breve ⟦⟧ é a paula já pegou já é",
+"sobre": 0,
+"iso": "Ê-E-E-E-E-E-E-E-E-E-E-E-E-E-E-E...",
+"antes": "o que aconteceu, descobrirei em breve. A Paula já pegou.",
+"depois": "o que aconteceu, descobrirei em breve. A Paula já pegou.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2757.42,
+"c1": 2757.7,
+"ctx": "Mas que a Banguela vai rebentar ele, ⟦⟧ é certeza, vai rebentar a árvore, é",
+"sobre": 0,
+"iso": "",
+"antes": "mas que a Banguela vai rebentar ele, é certeza. Vai rebentar a árvore, é certeza.",
+"depois": "mas que a banguela vai rebentar ele, é certeza. Vai rebentar a árvore, é certeza.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2774.34,
+"c1": 2774.8,
+"ctx": "Se não vai ficar vendo, não compensa. ⟦⟧ Eu tenho um outro podcast com um",
+"sobre": 0,
+"iso": "Ai...",
+"antes": "Eu tenho um...",
+"depois": "Eu tenho um...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2786.74,
+"c1": 2787.39,
+"ctx": "compartilho com ninguém, Bruno, só um minutinho. ⟦⟧ Eu nem fico compartilhando esse podcast porque",
+"sobre": 0,
+"iso": "Eeeh...",
+"antes": "Bruno, só um minutinho. Eu nem fico...",
+"depois": "Bruno, só um minutinho. Eu nem fico...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2841.44,
+"c1": 2842.14,
+"ctx": "já entendeu do que eu tava falando. ⟦⟧ E eu já comecei, eu escutei já",
+"sobre": 0,
+"iso": "E...",
+"antes": "mais não porque ele já entendeu do que eu estava falando e eu já comecei eu escutei já dois álbums de",
+"depois": "mas não porque ele já entendeu do que eu estava falando e eu já comecei eu escutei já dois álbums de",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2880.01,
+"c1": 2880.59,
+"ctx": "sempre gente gravando disco de Natal, né, ⟦⟧ e igual a gente escutou, a gente",
+"sobre": 0,
+"iso": "E...",
+"antes": "estava no disco de Natal, né? E aí igual a gente...",
+"depois": "estava no disco de Natal, né? E aí igual a gente...",
+"perdeu": [],
+"ganhou": []
+}
+]

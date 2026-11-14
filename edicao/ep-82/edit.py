@@ -1,0 +1,283 @@
+"""Montagem do Vai Tomar (modelo a partir do ep 80). Roda via master.sh, que define EP.
+Edite só o bloco de tempos abaixo; todos os tempos são na linha do tempo do Riverside (segundos)."""
+import json, os
+import numpy as np, soundfile as sf
+SR = 44100
+S = lambda t: int(round(t * SR))
+EP = os.environ['EP']
+
+# vozes somadas e já limitadas (ver master.sh); a música entra depois, sem passar pelo limitador
+voice, _ = sf.read('voice_lim.wav', dtype='float32')
+load = lambda f: sf.read(f, dtype='float32')[0]
+intro = load('intro44.wav')
+S_ = lambda t: int(round(t * 44100))
+
+# ---- tempos na linha do tempo do Riverside (segundos) ----
+START, END = 0.0, 3086.6              # abertura fria inteira; termina no "Adeus." (corte 1: mics cortados depois dele)
+CUTS = [(15.5, 49.1),                 # filho do Bruno gritando, até o "mas voltando" (decisão: 0:15–0:49)
+        (185.4, 227.2),               # conversa da espuma do microfone
+        (2705.0, 2709.0)]             # "eita, machucou ali": silêncio de 6 s encurta pra ~2 s, com o scratch no "eita"
+FINOS = [(227.41, 228.24, 'éee fel #0'),
+         (332.0, 332.56, 'éee fel #1'),
+         (665.23, 665.96, 'é isso bru #3'),
+         (843.57, 843.97, 'é isso fel #4'),
+         (863.87, 864.38, 'é isso fel #5'),
+         (1178.16, 1178.7, 'repetição fel #6'),
+         (1747.14, 1747.83, 'éee bru #7'),
+         (1983.75, 1984.39, 'éee fel #8'),
+         (2004.06, 2004.62, 'é isso fel #9'),
+         (2165.14, 2165.82, 'é isso fel #10'),
+         (2273.1, 2273.88, 'repetição bru #11'),
+         (2473.77, 2474.35, 'éee bru #12'),
+         (2542.4, 2542.93, 'é isso fel #13'),
+         (2573.36, 2574.21, 'é isso fel #14'),
+         (2593.81, 2594.4, 'é isso bru #15'),
+         (2708.03, 2708.55, 'éee fel #16'),
+         (2714.7, 2715.25, 'éee fel #17'),
+         (2757.42, 2757.7, 'éee bru #18'),
+         (2774.34, 2774.8, 'éee fel #19'),
+         (2786.74, 2787.39, 'éee fel #20'),
+         (2841.44, 2842.14, 'éee fel #21'),
+         (2880.01, 2880.59, 'éee fel #22')]
+INTRO_SPLIT = 540.5                   # fim do grito: a vinheta bate aqui, cheia e sem fade (achar pela energia)
+INTRO_LEAD = 0.8                      # a vinheta entra este tanto antes do fim do grito, por cima do finzinho (81: 0.8)
+INTRO_SOLO = 5.0                      # segundos de vinheta sozinha antes da fala voltar
+ALERTS = [(2632.8, 2.4)]              # "Christmas" do Bruno (43:52); o sininho vem logo depois
+SFX = [(577.95, 'sfx_propaganda.wav', 4.0, -2.0),   # "só R$ 19,90": jingle da SyncLab
+       (2002.15, 'sfx_grito.wav', 2.0, 2.0),        # "coloca uma pessoa gritando do nada aí, Rômulo, por favor"
+       (2636.45, 'sfx_sino4.wav', 3.2, -1.0),       # "coloca o sininho de Natal aí pra galera"
+       (2700.95, 'sfx_scratch.wav', 0.0, 0.0)]      # "eita": disco arranhando, antes do silêncio encurtado
+BEEPS = [(1957.7, 1959.1),            # "que apesar de sulista não é bolsonarista" (pedido do Bruno)
+         (2540.15, 2540.45)]          # "vai tomar no seu cu" (fino 13: piii no palavrão)
+BACKSTAGE = (2701.4, 2717.4)          # do fim do "eita" até antes do "mas e aí, Bruno": vozes de bastidor e sem trilha (corte 1)
+TCHAU_AT = 3086.4                     # "Adeus." do Felipe: a trilha do Natal sobe daqui
+FIRST_BED = 'm_cozy.wav'              # papo solto (Cozy no lugar da Chillhop, que sumiu do disco)
+# blocos de música de fundo: (início no Riverside, arquivo); o último bloco vai até o fim do episódio
+BEDS = [(771.0, 'm_soul.wav'),        # 12:51 comentários (Soul of Orleans)
+        (2163.9, 'm_cozy.wav'),       # 36:04 dólar e trabalho (papo solto)
+        (2609.6, 'm_natal.wav')]      # 43:30 Natal (O Christmas Tree, EvolvingVibes, Content ID)
+BED_BELOW_SPEECH_DB = 28.0
+BED_TRIM = {}                         # ajuste fino por faixa em dB, depois de medir a camada de música (ex.: {'m_x.wav': -1.5})
+STING_DB_ABOVE_SPEECH = 10.0          # vinheta marcante (o 78 usava ~3 dB; 7 dB ainda ficou tímido)
+END_FULL = 0.45                       # nível da trilha final depois do tchau (relativo à intro, como o Outro do 80)
+END_TAIL = 20.0                       # segundos de música cheia depois do tchau
+END_FADE = 5.0
+END_SONG = None                       # ('m_x.wav', t no Riverside): música pedida no ar pro fim; entra baixa em t, a trilha
+                                      # do último bloco sai em crossfade e ela sobe depois do tchau (no lugar da trilha)
+
+if BACKSTAGE:                         # voz de bastidor: telefone + sala, mais baixa, com 0,3 s de transição
+    import subprocess
+    a, b = BACKSTAGE; pad = 0.5
+    seg = voice[S_(a - pad):S_(b + pad)]
+    sf.write('_bs_in.wav', seg, SR, subtype='FLOAT')
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', '_bs_in.wav', '-af',
+                    'highpass=f=350,lowpass=f=2800,aecho=0.8:0.6:45|90:0.35|0.2,volume=-5dB',
+                    '-ac', str(seg.shape[1] if seg.ndim > 1 else 1), '-c:a', 'pcm_f32le', '_bs_out.wav'], check=True)
+    wet = sf.read('_bs_out.wav', dtype='float32')[0][:len(seg)]
+    m = np.ones(len(seg), np.float32); r = S_(0.3)
+    m[:S_(pad)] = 0; m[S_(pad):S_(pad) + r] = np.linspace(0, 1, r)
+    m[-S_(pad):] = 0; m[-S_(pad) - r:-S_(pad)] = np.linspace(1, 0, r)
+    if seg.ndim > 1: m = m[:, None]
+    voice[S_(a - pad):S_(b + pad)] = seg * (1 - m) + wet * m
+
+for a, b in BEEPS:                    # zera a voz antes de cortar, com 10 ms de rampa
+    r = np.linspace(1, 0, S_(0.01), dtype=np.float32)
+    voice[S_(a) - len(r):S_(a)] *= r; voice[S_(a):S_(b)] = 0; voice[S_(b):S_(b) + len(r)] *= r[::-1]
+
+gaps = np.load('gaps.npy')
+CUTS = [(a, b) for a, b in CUTS] + [(a, b) for a, b, _ in FINOS]
+for st, d in gaps:
+    if d > 1.5 and START < st < END and not any(a <= st <= b for a, b in CUTS) \
+            and not (INTRO_SPLIT - 5 < st < INTRO_SPLIT + 3):
+        CUTS.append((st + 0.4, st + d - 0.4))
+CUTS.sort()
+
+segs = []; cur = START
+for a, b in CUTS:
+    if b <= cur: continue
+    segs.append((cur, max(cur, a))); cur = b
+segs.append((cur, END))
+segs = [(a, b) for a, b in segs if b - a > 0.05]
+
+F = S(0.015)
+def piece(a, b, fade_out=None):
+    x = voice[S(a):S(b)].copy()
+    r = np.linspace(0, 1, F, dtype=np.float32); x[:F] *= r
+    fo = S(fade_out) if fade_out else F
+    x[-fo:] *= np.linspace(1, 0, fo, dtype=np.float32)
+    return x
+
+# som ambiente pras pausas inseridas (silêncio digital denuncia o corte): a maior pausa real do episódio
+_g = max(((st, d) for st, d in gaps if START < st < END), key=lambda z: z[1])
+ROOM = voice[S(_g[0] + 0.2):S(_g[0] + _g[1] - 0.2)].copy()
+
+out = []; pos = 0; mapping = []   # (src_a, src_b, out_a)
+def emit(a, b, fade_out=None):
+    global pos
+    mapping.append((a, b, pos)); out.append(piece(a, b, fade_out)); pos += S(b) - S(a)
+def gap(sec):
+    global pos
+    n = S(sec); x = np.resize(ROOM, n).astype(np.float32)
+    r = min(S(0.05), n // 2); x[:r] *= np.linspace(0, 1, r, dtype=np.float32); x[-r:] *= np.linspace(1, 0, r, dtype=np.float32)
+    out.append(x); pos += n
+
+# eventos que abrem (ou não) pausa na fala: (t, tipo, pausa, extra)
+events = [(INTRO_SPLIT, 'intro_solo', INTRO_SOLO, None)] + \
+         [(t, 'alert', g, None) for t, g in ALERTS] + \
+         [(t, 'sfx', g, (f, db)) for t, f, g, db in SFX]
+events.sort()
+marks = {'alert': [], 'sfx': []}
+for a, b in segs:
+    for t, kind, g, extra in events:
+        if a <= t < b:
+            emit(a, t, 0.06 if kind == 'alert' else None)   # alerta: a palavra morre em 60 ms por baixo dele
+            if kind == 'intro_solo': marks[kind] = pos
+            else: marks[kind].append((pos, extra))
+            if g: gap(g)
+            a = t
+    emit(a, b)
+v = np.concatenate(out)
+
+def O(t):
+    for a, b, oa in mapping:
+        if a <= t <= b: return oa + S(t) - S(a)
+    raise ValueError(t)
+
+speech_end = len(v)
+v = np.concatenate([v, np.zeros(S(END_TAIL + END_FADE + 5), np.float32)])
+mix = np.stack([v, v], axis=1)
+L = len(mix)
+
+def rms(x): return float(np.sqrt(np.mean(x ** 2)) + 1e-9)
+def loud(x):
+    """potência média das janelas de 400 ms acima de -50 dBFS (aproxima o LUFS com gate)"""
+    if x.ndim > 1: x = x.mean(axis=1)
+    w = S(0.4); k = len(x) // w; fr = np.sqrt(np.mean(x[:k * w].reshape(k, w) ** 2, axis=1))
+    fr = fr[fr > 10 ** (-50 / 20)]
+    return float(np.sqrt(np.mean(fr ** 2)))
+speech_rms = loud(voice[S(START):S(END)])
+bed_rms = speech_rms * 10 ** (-BED_BELOW_SPEECH_DB / 20)
+def bed_gain(track):
+    return bed_rms / loud(track)
+print(f"fala {20*np.log10(speech_rms):.1f} dB, fundo {20*np.log10(bed_rms):.1f} dB")
+
+def env(points, length):
+    t = np.array([p[0] for p in points]) * SR; g = np.array([p[1] for p in points])
+    return np.interp(np.arange(length), t, g).astype(np.float32)
+
+def add(track, at, envelope):
+    e = min(L, at + len(envelope)); k = e - at
+    mix[at:e] += track[:k] * envelope[:k, None]
+
+def looped(track, length, xf=S(3)):
+    """repete a faixa com crossfade até cobrir `length` amostras"""
+    res = np.zeros((length + len(track), 2), np.float32); p = 0
+    r = np.linspace(0, 1, xf, dtype=np.float32)[:, None]
+    while p < length:
+        t = track.copy()
+        if p > 0: t[:xf] *= r
+        t[-xf:] *= r[::-1]
+        res[p:p + len(t)] += t; p += len(t) - xf
+    return res[:length]
+
+def mmss(n): return f"{n/SR//60:.0f}m{n/SR%60:04.1f}s"
+
+XF = 4.0   # crossfade entre blocos de fundo
+# ---- vinheta: entra cheia no fim do grito, solo, desce pra fundo e some em ~12s de conversa ----
+solo = marks['intro_solo']; i0 = solo - S(INTRO_LEAD)
+t_full = 0.005                           # só o suficiente pra não estalar
+t_solo_end = (solo + S(INTRO_SOLO) - i0) / SR
+g_bed_intro = bed_gain(intro)
+STING_GAIN = speech_rms * 10 ** (STING_DB_ABOVE_SPEECH / 20) / loud(intro[:S(10)])
+intro_len = len(intro) / SR
+intro_end = t_solo_end + 12.0
+pts = [(0, 0.0), (t_full, STING_GAIN), (t_solo_end - 0.3, STING_GAIN),
+       (t_solo_end + 1.5, STING_GAIN * 0.5), (t_solo_end + 5.0, STING_GAIN * 0.2),
+       (t_solo_end + 9.0, g_bed_intro), (intro_end, 0.0), (intro_len, 0.0)]
+add(intro, i0, env(pts, S(intro_len)))
+intro_out_end = i0 + S(min(intro_end, intro_len))
+print(f"vinheta {mmss(i0)}, fundo da intro até {mmss(intro_out_end)}")
+
+# fundo nunca para: FIRST_BED cobre o buraco entre a intro e o primeiro bloco
+bed_starts = [(O(t), f) for t, f in BEDS]
+if not bed_starts or intro_out_end < bed_starts[0][0]:
+    bed_starts.insert(0, (intro_out_end - S(6.0), FIRST_BED))
+
+# ---- blocos; o último segue até o fim e sobe depois do tchau (sem trocar de música) ----
+o_end = O(TCHAU_AT)
+for k, (b0, f) in enumerate(bed_starts):
+    tr = load(f)
+    if k + 1 < len(bed_starts):
+        b1 = bed_starts[k + 1][0] + S(XF); length = b1 - b0
+        g = bed_gain(looped(tr, length)) * 10 ** (BED_TRIM.get(f, 0) / 20)    # ganho medido no trecho que toca (faixa curta e irregular erra pela média)
+        e = env([(0, 0), (XF, g), (length / SR - XF, g), (length / SR, 0)], length)
+    elif END_SONG:
+        b1 = O(END_SONG[1]) + S(XF); length = b1 - b0
+        g = bed_gain(looped(tr, length))
+        e = env([(0, 0), (XF, g), (length / SR - XF, g), (length / SR, 0)], length)
+    else:
+        g = bed_gain(tr); g_full = END_FULL * rms(intro[:S(8)]) / rms(tr[:S(8)])
+        rise0 = (max(o_end, b0 + S(XF)) - b0) / SR      # sobe a partir do tchau, por cima do fim da fala
+        rise1 = max(rise0, (speech_end - b0) / SR) + 1.5
+        length = S(rise1 + END_TAIL + END_FADE); b1 = b0 + length
+        e = env([(0, 0), (XF, g), (rise0, g), (rise1, g_full),
+                 (rise1 + END_TAIL, g_full), (length / SR, 0)], length)
+    add(looped(tr, length), b0, e)
+    print(f"fundo {f:16s} {mmss(b0)} → {mmss(b1)}")
+
+if END_SONG:
+    song = load(END_SONG[0]); s0 = O(END_SONG[1]); g = bed_gain(song)
+    g_full = END_FULL * rms(intro[:S(8)]) / rms(song[S(10):S(18)])
+    rise0 = max(0.0, (o_end - s0) / SR); rise1 = max(rise0, (speech_end - s0) / SR) + 1.5
+    length = min(len(song), S(rise1 + END_TAIL + END_FADE))
+    add(song, s0, env([(0, 0), (XF, g), (rise0, g), (rise1, g_full), (length / SR - END_FADE, g_full), (length / SR, 0)], length))
+    print(f"fim com {END_SONG[0]} {mmss(s0)}, sobe em {mmss(s0 + S(rise1))}")
+
+# ---- bastidor: a trilha some no trecho (0,6 s de rampa) e volta depois ----
+if BACKSTAGE:
+    a, b = O(BACKSTAGE[0]), O(BACKSTAGE[1]); r = S(0.6)
+    music = mix - np.stack([v, v], axis=1)
+    k = np.ones(L, np.float32); k[a:b] = 0
+    k[a - r:a] = np.linspace(1, 0, r); k[b:b + r] = np.linspace(0, 1, r)
+    mix = np.stack([v, v], axis=1) + music * k[:, None]
+    print(f"bastidor {mmss(a)} → {mmss(b)}")
+
+# ---- America alert: ~1,5 s cheio e fade até ~4 s, por cima da fala ----
+if marks['alert']:
+    alert = load('alert44.wav')
+    alert = alert[int(np.argmax(np.abs(alert).max(axis=1) > 10 ** (-40 / 20))):]   # pula o silêncio do começo do arquivo
+    # cheio até o 1º pico da frase (~2 s), depois cai; a fala volta no fim da pausa (ALERTS, 2.4 s), já com ele baixando
+    for p, _ in marks['alert']:
+        p -= S(0.03)                      # cobre os 60 ms em que a palavra morre
+        add(alert, p, env([(0, 1.0), (2.0, 1.0), (2.4, 0.45), (3.0, 0.15), (3.8, 0.0), (4.0, 0)], S(4.0)))
+        print(f"alerta {mmss(p)}")
+
+# ---- pedidos ao Rômulo: efeito no ponto, nível relativo à fala ----
+for p, (f, db) in marks['sfx']:
+    fx = load(f); g = speech_rms * 10 ** (db / 20) / loud(fx)
+    n = len(fx); add(fx, p, env([(0, g), (n / SR - 0.05, g), (n / SR, 0)], n))
+    print(f"efeito {f} {mmss(p)}")
+
+# ---- censura: bipe no tamanho exato do nome, no nível da fala ----
+if BEEPS:
+    beep = load('sfx_beep.wav'); g = speech_rms / loud(beep)
+    for a, b in BEEPS:
+        n = S(b - a); p = O(a); r = S(0.01)
+        add(beep[S(0.3):S(0.3) + n], p, env([(0, 0), (0.01, g), ((n - r) / SR, g), (n / SR, 0)], n))
+        print(f"bipe {mmss(p)} ({b - a:.2f}s)")
+
+last = int(np.max(np.nonzero(np.abs(mix).max(axis=1) > 1e-4))) + S(0.3)
+mix = mix[:last]
+sf.write(f'ep{EP}_premaster.wav', mix, SR, subtype='FLOAT')
+if os.environ.get('SO_MUSICA'):     # conferência: só a camada de música, mais a voz montada pra medir contra
+    sf.write(f'ep{EP}_musica.wav', mix - np.stack([v, v], axis=1)[:len(mix)], SR, subtype='FLOAT')
+    sf.write(f'ep{EP}_voz.wav', v[:len(mix)], SR, subtype='FLOAT')
+
+# mapa pras prévias e pra converter minuto do corte → Riverside
+json.dump({'mapping': [(a, b, oa / SR) for a, b, oa in mapping],
+           'vinheta': i0 / SR, 'alertas': [p / SR for p, _ in marks['alert']],
+           'efeitos': [[p / SR, f] for p, (f, _) in marks['sfx']],
+           'bipes': [O(a) / SR for a, b in BEEPS], 'tchau': o_end / SR, 'fim': len(mix) / SR,
+           'finos': [[O(a) / SR, txt] for a, b, txt in FINOS if any(x <= a <= y for x, y, _ in mapping)]},
+          open('mapa.json', 'w'), indent=1, ensure_ascii=False)
+print(f"saída {mmss(o_end)}, duração {mmss(len(mix))}")

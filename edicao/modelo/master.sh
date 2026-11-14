@@ -2,7 +2,7 @@ set -e
 # FAIXA=m usa fel_m.wav/bru_m.wav (ruídos fora da fala silenciados por mudos.py); padrão: fel_d/bru_d
 EP=${EP:?defina EP=numero do episódio}; V=${V:?defina V=numero do corte}
 export EP
-OUT=${OUT:-~/Desktop/"Vai tomar no seu cunhado/Temporada 6/${EP}/Episódio ${EP} - corte ${V} (normalizado).mp3"}
+OUT=${OUT:-~/Podcasts/"Vai Tomar no Seu Cunhado/Temporada 6/${EP}/Episódio ${EP} - corte ${V} (normalizado).mp3"}
 ffmpeg -v error -y -i fel_${FAIXA:-d}.wav -i bru_${FAIXA:-d}.wav -filter_complex "[0][1]amix=inputs=2:normalize=0,alimiter=limit=0.6:attack=3:release=80:level=false" -c:a pcm_f32le voice_lim.wav
 python3 edit.py
 ffmpeg -v error -y -i ep${EP}_premaster.wav -af "alimiter=limit=0.75:attack=2:release=60:level=false" -c:a pcm_f32le ep${EP}_lim.wav

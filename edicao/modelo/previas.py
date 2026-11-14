@@ -2,7 +2,7 @@
 Uso: EP=81 V=1 python3 previas.py   → pasta "Temporada 6/<EP>/prévias corte <V>/" com mp3 numerados por ordem no episódio."""
 import json, os, subprocess
 EP, V = os.environ['EP'], os.environ['V']
-base = os.path.expanduser(f'~/Desktop/Vai tomar no seu cunhado/Temporada 6/{EP}')
+base = os.path.expanduser(f'~/Podcasts/Vai Tomar no Seu Cunhado/Temporada 6/{EP}')
 src = f'{base}/Episódio {EP} - corte {V} (normalizado).mp3'
 dst = f'{base}/prévias corte {V}'; os.makedirs(dst, exist_ok=True)
 m = json.load(open('mapa.json'))
