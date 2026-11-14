@@ -13,7 +13,7 @@ intro = load('intro44.wav')
 S_ = lambda t: int(round(t * 44100))
 
 # ---- tempos na linha do tempo do Riverside (segundos) ----
-START, END = 0.0, 3086.6              # abertura fria inteira; termina no "Adeus." (corte 1: mics cortados depois dele)
+START, END = 232.4, 3086.6            # começa no "Bruno, você tá bem hoje?" (corte 2: ele cortou a conversa antes); termina no "Adeus."
 CUTS = [(15.5, 49.1),                 # filho do Bruno gritando, até o "mas voltando" (decisão: 0:15–0:49)
         (185.4, 227.2),               # conversa da espuma do microfone
         (2705.0, 2709.0)]             # "eita, machucou ali": silêncio de 6 s encurta pra ~2 s, com o scratch no "eita"
@@ -42,10 +42,10 @@ FINOS = [(227.41, 228.24, 'éee fel #0'),
 INTRO_SPLIT = 540.5                   # fim do grito: a vinheta bate aqui, cheia e sem fade (achar pela energia)
 INTRO_LEAD = 0.8                      # a vinheta entra este tanto antes do fim do grito, por cima do finzinho (81: 0.8)
 INTRO_SOLO = 5.0                      # segundos de vinheta sozinha antes da fala voltar
-ALERTS = [(2632.8, 2.4)]              # "Christmas" do Bruno (43:52); o sininho vem logo depois
+ALERTS = [(2633.12, 2.4)]             # "Christmas" do Bruno: o "s" vai até ~2633.1 (corte 4 cortava antes e sobrava o "s")
 SFX = [(577.95, 'sfx_propaganda.wav', 4.0, -2.0),   # "só R$ 19,90": jingle da SyncLab
        (2002.15, 'sfx_grito.wav', 2.0, 2.0),        # "coloca uma pessoa gritando do nada aí, Rômulo, por favor"
-       (2636.45, 'sfx_sino4.wav', 3.2, -1.0),       # "coloca o sininho de Natal aí pra galera"
+       (2636.85, 'sfx_sino4.wav', 3.2, -3.0, 1.0),  # "...pra galera": fim natural do "galera"; fade-in de 1 s e 2 dB mais baixo (corte 5)
        (2700.95, 'sfx_scratch.wav', 0.0, 0.0)]      # "eita": disco arranhando, antes do silêncio encurtado
 BEEPS = [(1957.7, 1959.1),            # "que apesar de sulista não é bolsonarista" (pedido do Bruno)
          (2540.15, 2540.45)]          # "vai tomar no seu cu" (fino 13: piii no palavrão)
@@ -124,7 +124,7 @@ def gap(sec):
 # eventos que abrem (ou não) pausa na fala: (t, tipo, pausa, extra)
 events = [(INTRO_SPLIT, 'intro_solo', INTRO_SOLO, None)] + \
          [(t, 'alert', g, None) for t, g in ALERTS] + \
-         [(t, 'sfx', g, (f, db)) for t, f, g, db in SFX]
+         [(t, 'sfx', g, (f, db, *fi)) for t, f, g, db, *fi in SFX]
 events.sort()
 marks = {'alert': [], 'sfx': []}
 for a, b in segs:
@@ -253,9 +253,10 @@ if marks['alert']:
         print(f"alerta {mmss(p)}")
 
 # ---- pedidos ao Rômulo: efeito no ponto, nível relativo à fala ----
-for p, (f, db) in marks['sfx']:
+for p, (f, db, *fi) in marks['sfx']:
     fx = load(f); g = speech_rms * 10 ** (db / 20) / loud(fx)
-    n = len(fx); add(fx, p, env([(0, g), (n / SR - 0.05, g), (n / SR, 0)], n))
+    fin = fi[0] if fi else 0.0           # fade-in opcional (5º item do SFX)
+    n = len(fx); add(fx, p, env(([(0, 0.0), (fin, g)] if fin else [(0, g)]) + [(n / SR - 0.05, g), (n / SR, 0)], n))
     print(f"efeito {f} {mmss(p)}")
 
 # ---- censura: bipe no tamanho exato do nome, no nível da fala ----
@@ -276,7 +277,7 @@ if os.environ.get('SO_MUSICA'):     # conferência: só a camada de música, mai
 # mapa pras prévias e pra converter minuto do corte → Riverside
 json.dump({'mapping': [(a, b, oa / SR) for a, b, oa in mapping],
            'vinheta': i0 / SR, 'alertas': [p / SR for p, _ in marks['alert']],
-           'efeitos': [[p / SR, f] for p, (f, _) in marks['sfx']],
+           'efeitos': [[p / SR, f] for p, (f, *_) in marks['sfx']],
            'bipes': [O(a) / SR for a, b in BEEPS], 'tchau': o_end / SR, 'fim': len(mix) / SR,
            'finos': [[O(a) / SR, txt] for a, b, txt in FINOS if any(x <= a <= y for x, y, _ in mapping)]},
           open('mapa.json', 'w'), indent=1, ensure_ascii=False)

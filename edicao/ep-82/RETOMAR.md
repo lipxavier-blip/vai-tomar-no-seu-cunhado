@@ -48,3 +48,7 @@
   ~/Podcasts. Página de aprovação do corte: `aprovacao/c1.html`, porta 8794, salva em `aprovacao/decisoes-c1.json`.
 - 13/11 ~21h50: corte 1 aprovado menos 2 pontos. Corte 2 (50:17, -15,9 LUFS / -1,3 dBTP): BACKSTAGE (2701.4–2717.4, voz abafada com
   eco e sem trilha) e END=3086.6 (mics cortam no "Adeus"). Página `aprovacao/c2.html`, porta 8795, salva em `decisoes-c2.json`.
+- 13/11 ~22h10: corte 3 (47:41, -16,0 LUFS): START=232.4, o episódio começa no "Bruno, você tá bem hoje?" a pedido dele. Resto igual ao corte 2 (deslocado -2:37).
+- corte 4 (47:41): sininho movido pra 2636.85 (fim natural do "galera"; antes cortava a palavra a -21 dB) com fade-in de 0,35 s (5º item opcional do SFX no edit.py).
+- corte 5 (47:41): alerta do Christmas em 2633.12 (fim do "s"; antes sobrava o "s"); sininho com fade-in de 1 s e -3 dB.
+- APROVADO o corte 5 (13/11, ~22h30). Próximo: /publicar-episodio-vtnsc.
