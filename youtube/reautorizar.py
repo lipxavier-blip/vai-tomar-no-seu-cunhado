@@ -24,7 +24,7 @@ import urllib.request
 import webbrowser
 from pathlib import Path
 
-ENV_PATH = Path("/Users/felipexavier/vai-tomar-no-seu-cunhado/.env.local")
+ENV_PATH = Path(__file__).parent.parent / ".env.local"
 PORTA = 8788
 REDIRECT_URI = f"http://localhost:{PORTA}/callback"
 SCOPES = "https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube"
