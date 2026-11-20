@@ -1,10 +1,11 @@
 """Aplica mudos.json: silencia nas faixas os ruídos fora da fala (fade de 40 ms). Saída: fel_m.wav, bru_m.wav"""
 import json, numpy as np, soundfile as sf
 SR = 44100; R = json.load(open('mudos.json')); F = int(0.04 * SR)
+PROTEGE = [(819.0, 829.0)]   # TROCAR A CADA EPISÓDIO: do "vai" até ~1 s depois do fim do grito (valores do 83). No 83 o AST chamou o fim esticado de Wail/Speech e zerou
 for tr in ('fel', 'bru'):
     x, _ = sf.read(f'{tr}_d.wav', dtype='float32'); g = np.ones(len(x), np.float32)
     for a, b, lab, acao in R[tr]:
-        if acao != 'mudo': continue
+        if acao != 'mudo' or any(a < q1 and b > q0 for q0, q1 in PROTEGE): continue
         i0, i1 = max(0, int((a - 0.03) * SR)), min(len(x), int((b + 0.03) * SR))
         g[i0:i1] = 0
     # rampas de 40 ms nas bordas de cada trecho mudo
