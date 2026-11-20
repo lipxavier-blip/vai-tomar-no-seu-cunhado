@@ -41,3 +41,4 @@
 - Página aprovacao/descricao.html (porta 8800 → decisoes-descricao.json): título "Trampando pra gringa", descrição, músicas ok, tags salvos → descricao-ep-83.md na raiz. Falta ele salvar o card do grito (corte 3 ok?).
 - 20/11 11:43: grito ok, corte 3 APROVADO. Falta: apagar cortes 1-2 e prévias antigas (só com ok dele) e /publicar-episodio-vtnsc.
 - 20/11: pronto pra publicar, falta só a capa (a Paula faz; ele manda e aí roda /publicar-episodio-vtnsc). Apagar cortes 1-2 e prévias antigas: ele não respondeu, perguntar de novo.
+- 20/11 tarde: Spreaker rascunho 76489099 (áudio, capa, tags ok); YouTube privado KVEVQo6qN_o com thumb; wiki 83 + Obsidian; legenda em Temporada 6/83/legenda-instagram-83.txt. Ele publica o rascunho e troca a visibilidade.
