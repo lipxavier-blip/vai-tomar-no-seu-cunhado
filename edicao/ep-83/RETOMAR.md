@@ -40,3 +40,4 @@
 - Ele achou o grito cortado: os mudos zeravam o fim do "cunhadoooo" (AST: Wail/Speech). `mudos.py` ganhou PROTEGE 819–829 → mudos → grito.py → corte 3 (55:45, -16,0 LUFS, -2,2 dBTP). mapa do corte 2 em mapa_c2.json.
 - Página aprovacao/descricao.html (porta 8800 → decisoes-descricao.json): título "Trampando pra gringa", descrição, músicas ok, tags salvos → descricao-ep-83.md na raiz. Falta ele salvar o card do grito (corte 3 ok?).
 - 20/11 11:43: grito ok, corte 3 APROVADO. Falta: apagar cortes 1-2 e prévias antigas (só com ok dele) e /publicar-episodio-vtnsc.
+- 20/11: pronto pra publicar, falta só a capa (a Paula faz; ele manda e aí roda /publicar-episodio-vtnsc). Apagar cortes 1-2 e prévias antigas: ele não respondeu, perguntar de novo.
