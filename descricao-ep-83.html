@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ep 83 · título e descrição</title>
+<style>
+:root{--bg:#f6f3ee;--card:#fff;--tx:#1d1b18;--mu:#6b655c;--ln:#e3ddd3;--ac:#c2410c;--ok:#15803d;--warn:#b45309}
+@media (prefers-color-scheme:dark){:root{--bg:#161412;--card:#211e1b;--tx:#efe9e0;--mu:#a49b8f;--ln:#38332d;--ac:#fb923c;--ok:#4ade80;--warn:#fbbf24}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 -apple-system,system-ui,sans-serif;padding:24px 16px 110px}
+main{max-width:720px;margin:0 auto}h1{font-size:24px;margin:0 0 4px}p.lead{color:var(--mu);margin:0 0 24px}
+.c{background:var(--card);border:1px solid var(--ln);border-radius:12px;padding:16px;margin:0 0 14px}
+.c h2{font-size:17px;margin:0 0 6px}.t{color:var(--mu);font-size:14px;margin:0 0 10px}
+label.o{display:block;padding:10px 12px;border:1px solid var(--ln);border-radius:8px;margin:6px 0;cursor:pointer}
+label.o:has(input:checked){border-color:var(--ac)}label.o b{display:inline}label.o span{display:block;color:var(--mu);font-size:14px;margin-left:24px}
+input[type=text],textarea{width:100%;border:1px solid var(--ln);border-radius:8px;background:transparent;color:var(--tx);padding:8px 10px;font:inherit}
+textarea.d{min-height:330px;font:14px/1.5 ui-monospace,Menlo,monospace}textarea.n{min-height:52px;margin-top:8px}
+.r{display:flex;gap:10px;align-items:center;margin-top:10px}button{border:0;border-radius:8px;padding:8px 14px;font:600 14px system-ui;cursor:pointer;background:var(--ac);color:#fff}
+.s{font-size:13px;color:var(--mu)}.s.ok{color:var(--ok)}.w{color:var(--warn);font-size:14px}
+footer{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--ln);padding:12px 16px}
+footer div{max-width:720px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+</style></head><body><main>
+<h1>Ep 83 · título e descrição</h1>
+<p class="lead">Primeiro confere o grito no corte 3. Depois escolhe o título, edita a descrição e salva. Mantive o formato do 82: gancho, o que é o episódio e a varredura "de X, passando por Y, até Z".</p>
+
+<div class="c" data-k="grito"><h2>Grito de volta (corte 3)</h2>
+<p class="t">A limpeza de ruído tinha confundido o fim esticado do "cunhadoooo" com barulho e zerado uns 2 s no seu microfone e 1 s no do Bruno. Agora o grito vai inteiro e a vinheta entra por cima do finzinho, como antes. Prévia do 12:27 ao 13:02 do corte 3.</p>
+<audio controls preload="metadata" src="grito-corte3.mp3" style="width:100%"></audio>
+<label class="o"><input type="radio" name="grito" value="ok"> Grito certo, corte 3 aprovado<span>vira a versão final do episódio</span></label>
+<label class="o"><input type="radio" name="grito" value="ajustar"> Ainda precisa de ajuste<span>escreve embaixo o que está errado</span></label>
+<textarea class="n" placeholder="Comentário (opcional)"></textarea>
+<div class="r"><button>Salvar</button><span class="s">não salvo</span></div></div>
+
+<div class="c" data-k="titulo"><h2>Título</h2>
+<p class="t">No Spreaker vai como "83 - Título" e no YouTube como "Vai Tomar no Seu Cunhado #83: Título". Todas as opções saíram de falas do episódio.</p>
+<label class="o"><input type="radio" name="titulo" value="Meu status está no Slack"> <b>Meu status está no Slack</b> (recomendo)<span>a frase do Bruno sobre a Daily da gringa que acaba em 10 segundos. Resume o assunto e tem graça</span></label>
+<label class="o"><input type="radio" name="titulo" value="Ser humano viável"> <b>Ser humano viável</b><span>o que você diz que é o mínimo que se espera de um adulto, e repete no fim</span></label>
+<label class="o"><input type="radio" name="titulo" value="Daily de duas horas"> <b>Daily de duas horas</b><span>a reunião brasileira de 15 minutos que vira manhã inteira</span></label>
+<label class="o"><input type="radio" name="titulo" value="Pi pro Lucas"> <b>Pi pro Lucas</b><span>o Bruno mandando o bipe do desktop ligando pro amigo que perdeu o computador. Só quem ouviu entende</span></label>
+<label class="o"><input type="radio" name="titulo" value="Trampando pra gringa"> <b>Trampando pra gringa</b><span>o tema direto, sem piada</span></label>
+<label class="o"><input type="radio" name="titulo" value="outro"> Outro: <input type="text" id="titulo_outro" style="width:60%;display:inline-block" placeholder="escreva o título"></label>
+<div class="r"><button>Salvar</button><span class="s">não salvo</span></div></div>
+
+<div class="c" data-k="descricao"><h2>Descrição</h2>
+<p class="t">É o mesmo texto no Spreaker e no YouTube. No YouTube eu acrescento o "deixa um like e se inscreve no canal". Pode editar direto aqui.</p>
+<textarea class="d" id="desc">Hoje o papo é trabalho. Mais especificamente, trabalhar pra gringa.
+
+O Bruno está na primeira experiência numa empresa de fora, o Felipe já passou por duas, e os dois comparam com o que viveram em empresa brasileira.
+
+De um desktop que deixou o Lucas com lágrima no olho, passando pela Daily que dura duas horas e pelo chefe que precisa te ver no escritório, até a folga pedida na quarta pra ver o Mahomes na sexta. E o Rômulo atendeu pedido de louvor e de Ed Motta.
+
+No fim fica uma pergunta pra você: qual foi a maior maluquice que já aconteceu no seu trabalho? Conta pra gente por e-mail.
+
+Músicas:
+Segura na Mão de Deus (Nelson Monteiro da Motta), versão Harpa Cristã do canal Aqui Gospel
+Close Old Son, por OTE (Epidemic Sound)
+Cozy, por HappyWorldWithMochi
+Vamos Dançar, por Ed Motta
+
+Sigam a gente no Instagram: @vaitomarnoseucunhado
+
+Se você tem uma história ou um comentário mais longo, envie um e-mail para vaitomarnoseucunhado@gmail.com 📬</textarea>
+<textarea class="n" placeholder="Comentário (opcional)"></textarea>
+<div class="r"><button>Salvar</button><span class="s">não salvo</span></div></div>
+
+<div class="c" data-k="musicas"><h2>Origem das músicas</h2>
+<p class="t">Só pra você decidir. Isso não entra na descrição.</p>
+<p class="w">Nenhuma das três tem licença arquivada: <b>Segura na Mão de Deus</b> e <b>Vamos Dançar</b> vieram do YouTube a seu pedido (a do Ed Motta é música comercial, claim é quase certo), e <b>Cozy</b> segue com origem não confirmada, como no 82. Se vier claim, não dá pra contestar.</p>
+<label class="o"><input type="radio" name="musicas" value="ok"> Sobe assim mesmo<span>claim de música só redireciona a monetização, não bloqueia o vídeo, e o canal está fora do Partner Program (decisão do ep 79)</span></label>
+<label class="o"><input type="radio" name="musicas" value="ver"> Quero ver isso antes de subir</label>
+<div class="r"><button>Salvar</button><span class="s">não salvo</span></div></div>
+
+<div class="c" data-k="tags"><h2>Tags</h2>
+<p class="t">Separadas por vírgula, iguais no Spreaker e no YouTube.</p>
+<input type="text" id="tags" value="vai tomar no seu cunhado, podcast brasileiro, humor, cunhados, trabalho remoto, trabalhar pra gringa, home office, daily">
+<div class="r"><button>Salvar</button><span class="s">não salvo</span></div></div>
+</main>
+<footer><div><span id="st" class="s">Nada salvo ainda</span><button id="all">Salvar tudo</button></div></footer>
+<script>
+const KEY='vtnsc-ep83-descricao';let d={};try{d=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+const cards=[...document.querySelectorAll('.c')];
+function read(c){const k=c.dataset.k;
+ if(k==='titulo'){const r=c.querySelector('input[type=radio]:checked');const v=r?r.value:'';return {escolha:v,titulo:v==='outro'?document.getElementById('titulo_outro').value:v}}
+ if(k==='descricao')return {texto:document.getElementById('desc').value,comentario:c.querySelector('textarea.n').value};
+ if(k==='grito'){const r=c.querySelector('input:checked');return {escolha:r?r.value:'',comentario:c.querySelector('textarea.n').value}}
+ if(k==='musicas'){const r=c.querySelector('input:checked');return {escolha:r?r.value:''}}
+ if(k==='tags')return {tags:document.getElementById('tags').value}}
+function fill(){const t=d.titulo;if(t){const r=document.querySelector(`input[name=titulo][value="${t.escolha}"]`);if(r)r.checked=true;if(t.escolha==='outro')document.getElementById('titulo_outro').value=t.titulo||''}
+ if(d.descricao){document.getElementById('desc').value=d.descricao.texto;document.querySelector('[data-k=descricao] textarea.n').value=d.descricao.comentario||''}
+ if(d.musicas&&d.musicas.escolha){const r=document.querySelector(`input[name=musicas][value="${d.musicas.escolha}"]`);if(r)r.checked=true}
+ if(d.tags)document.getElementById('tags').value=d.tags.tags
+ if(d.grito){const r=document.querySelector(`input[name=grito][value="${d.grito.escolha}"]`);if(r)r.checked=true;document.querySelector('[data-k=grito] textarea.n').value=d.grito.comentario||''}}
+fill();
+document.getElementById('titulo_outro').addEventListener('focus',()=>{document.querySelector('input[name=titulo][value=outro]').checked=true});
+async function save(cs){cs.forEach(c=>{d[c.dataset.k]=read(c)});d._salvo_em=new Date().toISOString();
+ try{localStorage.setItem(KEY,JSON.stringify(d))}catch(e){}
+ try{const r=await fetch('/save',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});if(!r.ok)throw 0;
+  cs.forEach(c=>{const s=c.querySelector('.s');s.textContent='salvo';s.className='s ok'});document.getElementById('st').textContent='Salvo às '+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'})}
+ catch(e){document.getElementById('st').textContent='Não salvou. O servidor está no ar?'}}
+cards.forEach(c=>{c.querySelector('button').onclick=()=>save([c]);c.addEventListener('input',()=>{const s=c.querySelector('.s');s.textContent='não salvo';s.className='s'})});
+document.getElementById('all').onclick=()=>save(cards);
+</script></body></html>

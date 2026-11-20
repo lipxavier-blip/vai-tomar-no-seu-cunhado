@@ -1,0 +1,232 @@
+[
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 77.72,
+"c1": 78.54,
+"ctx": "uma coisa F. Nossa se Deus quiser. ⟦⟧ É, deixa eu te falar uma coisa,",
+"sobre": 0,
+"iso": "Eeeeeee...",
+"antes": "Nossa, se Deus quiser. Deixa eu te falar uma coisa, é porque no episódio passado...",
+"depois": "Nossa, se Deus quiser. Deixa eu te falar uma coisa, é porque no episódio passado...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 178.65,
+"c1": 179.45,
+"ctx": "5 talvez, o 6 eu não sei, ⟦⟧ e aí é muito tempo eu to",
+"sobre": 0,
+"iso": "Eeeeeee...",
+"antes": "os 6 eu não sei e aí há muito tempo eu estou querendo montar um desktop",
+"depois": "O 6 eu não sei. E aí, há muito tempo eu estou querendo montar um desktop.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 825.58,
+"c1": 826.48,
+"ctx": "o Bruno Rezende, vai tomar no seu ⟦⟧ cunhado, sim, gostei, gostei dessa palavra, virou",
+"sobre": 0.04,
+"iso": "",
+"antes": "No seu cunhado!",
+"depois": "No seu cunhado!",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 1274.0,
+"c1": 1274.43,
+"ctx": "ta, ta. Você tá explicando como que ⟦⟧ é a infraestrutura da empresa, né? Sim.",
+"sobre": 0,
+"iso": "",
+"antes": "Você está explicando como é a infraestrutura da empresa, né?",
+"depois": "Você está explicando como a infraestrutura da empresa, né?",
+"perdeu": [
+"e"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1589.97,
+"c1": 1590.55,
+"ctx": "é muito bom, isso é muito top. ⟦⟧ Eu estava falando sobre pontualidade, né? No",
+"sobre": 0,
+"iso": "ÊÊÊÊÊ",
+"antes": "É muito bom, isso é muito top. Eu estava falando sobre pontualidade.",
+"depois": "É muito bom. Isso é muito top. Eu estava falando sobre pontualidade.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "é isso",
+"c0": 1632.12,
+"c1": 1632.35,
+"ctx": "começou, saca? Porque está esperando alguém entrar, ⟦e isso⟧ não acontece aqui, dá tipo assim, exatamente.",
+"sobre": 0,
+"iso": "",
+"antes": "saco, porque está esperando alguém entrar, isso não acontece aqui.",
+"depois": "saca, porque está esperando alguém entrar. Não acontece aqui.",
+"perdeu": [
+"isso"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "repetição",
+"c0": 1790.66,
+"c1": 1791.7,
+"ctx": "eles ficam criando um milhão de reuniões ⟦pra,⟧ pra, pra como se, é tipo, é,",
+"sobre": 0,
+"iso": "Braa!",
+"antes": "Aí eles ficam criando um milhão de reuniões pra... pra... pra como se...",
+"depois": "Aí eles ficam criando um milhão de reuniões pra... pra como se...",
+"perdeu": [
+"pra"
+],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "é isso",
+"c0": 1802.92,
+"c1": 1803.46,
+"ctx": "da manhã, no final da manhã, porque ⟦é isso,⟧ o cara for sair para fazer qualquer",
+"sobre": 0,
+"iso": "porque é isso.",
+"antes": "no começo da manhã, no final da manhã, porque é isso o cara for sair para fazer qualquer outra coisa.",
+"depois": "no começo da manhã, no final da manhã, porque o cara for sair para fazer qualquer outra coisa.",
+"perdeu": [
+"e",
+"isso"
+],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 1985.18,
+"c1": 1985.67,
+"ctx": "do fuso, né, principalmente agora e outra. ⟦⟧ É, essa empresa que eu trabalho, quando",
+"sobre": 0,
+"iso": "Eee...",
+"antes": "principalmente agora e outra é simples que eu trabalha quando a gente fala na gringa",
+"depois": "principalmente agora e outra é simples que eu trabalha quando a gente fala na gringa",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2036.55,
+"c1": 2037.11,
+"ctx": "fiz essa pesquisa, mas são os quatro. ⟦⟧ Mas assim, eu acho que 80 %",
+"sobre": 0,
+"iso": "É...",
+"antes": "Mas são os quatro. Mas assim, eu acho que 80...",
+"depois": "Mas são os quatro. Mas assim, eu acho que 80...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2076.62,
+"c1": 2077.22,
+"ctx": "estou trabalhando agora para os Estados Unidos. ⟦⟧ Já trabalhei em empresas que tinham também",
+"sobre": 0,
+"iso": "Eeeh...",
+"antes": "Eu estou trabalhando agora para os Estados Unidos. Já trabalhei em empresas que tinham também aqui no Brasil.",
+"depois": "Eu estou trabalhando agora para os Estados Unidos. Já trabalhei em empresas que tinham também aqui no Brasil.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "fel",
+"tipo": "éee",
+"c0": 2246.04,
+"c1": 2246.59,
+"ctx": "é minha da empresa que eu trabalho, ⟦⟧ de eu trabalhei já nesses 5 anos",
+"sobre": 0,
+"iso": "Eeeh...",
+"antes": "Não é minha, da empresa que eu trabalho. De eu trabalhei já nesses...",
+"depois": "Não é minha. Da empresa que eu trabalho. De eu trabalhei já nesses...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2611.06,
+"c1": 2611.73,
+"ctx": "ponto que eu gostar de trazer aqui ⟦⟧ é... Não, tá esperando você me chamar,",
+"sobre": 0,
+"iso": "Eeeeeee...",
+"antes": "ponto que eu gostar de trazer aqui é",
+"depois": "ponto que eu gostar de trazer aqui é",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 2978.84,
+"c1": 2979.41,
+"ctx": "sempre está de câmera aberta nas reuniões, ⟦⟧ eu acho que ele é o melhor",
+"sobre": 0,
+"iso": "Eeeh...",
+"antes": "nas reuniões. Eu acho que ele é o melhor...",
+"depois": "nas reuniões. Eu acho que ele é o melhor...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 3013.49,
+"c1": 3014.0,
+"ctx": "mas acho que todo mundo sabe, né, ⟦⟧ fizerem uma volta aos escritórios lá. E",
+"sobre": 0,
+"iso": "É...",
+"antes": "Não sabe, né? Fizeram a volta aos escritórios.",
+"depois": "Não sabe, né? Fizeram a volta aos escritórios.",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 3121.84,
+"c1": 3122.48,
+"ctx": "seguir na hora de tirar férias. né? ⟦⟧ Cada empresa tem um rolê, tipo assim,",
+"sobre": 0,
+"iso": "Eeeeeee",
+"antes": "que você tem que seguir na hora de tirar férias, né? Cada empresa tem um rolê, tipo assim, aqui eu trabalhava...",
+"depois": "que você tem que seguir na hora de tirar férias, né? Cada empresa tem um rolê, tipo assim, aqui eu trabalhava...",
+"perdeu": [],
+"ganhou": []
+},
+{
+"faixa": "bru",
+"tipo": "éee",
+"c0": 3200.89,
+"c1": 3201.52,
+"ctx": "de horas e todo o rolê, né? ⟦⟧ Daqui duas semanas, né? Eu quero ficar",
+"sobre": 0,
+"iso": "Eee...",
+"antes": "de saldo de oros e todo rolê, né? Daqui duas semanas, né? Eu quero ficar...",
+"depois": "de saldo de oros e todo rolê, né? Daqui duas semanas, né? Eu quero ficar...",
+"perdeu": [],
+"ganhou": []
+}
+]

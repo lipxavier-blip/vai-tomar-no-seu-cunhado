@@ -1,0 +1,13 @@
+set -e
+# ep 83 corte 2: EQ "Compressed Vocal" do GarageBand do Felipe nas duas faixas (no lugar do highpass de 80 Hz), medido com ruído branco
+# ep 83: Bruno bruto em -32,9 LUFS, Felipe em -21,5 → Bruno +12 dB antes do compressor
+ffmpeg -v error -y -i fel.wav -af "adeclip,highpass=f=48:poles=2,highpass=f=48:poles=2,equalizer=f=115:t=q:w=0.55:g=6.5,equalizer=f=1500:t=q:w=0.6:g=-2,highshelf=f=5000:t=q:w=0.6:g=2.5,acompressor=threshold=-22dB:ratio=3:attack=10:release=150:makeup=2" -c:a pcm_f32le fel_p1.wav
+ffmpeg -v error -y -i bru.wav -af "highpass=f=48:poles=2,highpass=f=48:poles=2,equalizer=f=115:t=q:w=0.55:g=6.5,equalizer=f=1500:t=q:w=0.6:g=-2,highshelf=f=5000:t=q:w=0.6:g=2.5,volume=12dB,acompressor=threshold=-22dB:ratio=3:attack=10:release=150:makeup=2" -c:a pcm_f32le bru_p1.wav
+for s in fel bru; do
+  J=$(ffmpeg -hide_banner -i ${s}_p1.wav -af loudnorm=I=-19:TP=-3:LRA=11:print_format=json -f null - 2>&1 | sed -n '/^{/,/^}/p')
+  mI=$(echo "$J"|python3 -c "import json,sys;print(json.load(sys.stdin)['input_i'])")
+  g=$(python3 -c "print(-19-($mI))")
+  echo "$s measured $mI gain $g"
+  ffmpeg -v error -y -i ${s}_p1.wav -af "volume=${g}dB" -c:a pcm_f32le ${s}_p.wav
+done
+echo STEMS_DONE

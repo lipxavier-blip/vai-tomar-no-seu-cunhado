@@ -10,8 +10,15 @@ class H(http.server.BaseHTTPRequestHandler):
         rel = urllib.parse.unquote(self.path.split('?')[0]).lstrip('/')
         f = os.path.realpath(os.path.join(os.path.dirname(page), rel))
         if rel and f.startswith(os.path.dirname(page) + os.sep) and os.path.isfile(f):
-            body = open(f, 'rb').read(); self.send_response(200)
-            self.send_header('Content-Type', mimetypes.guess_type(f)[0] or 'application/octet-stream')
+            body = open(f, 'rb').read(); ct = mimetypes.guess_type(f)[0] or 'application/octet-stream'
+            rg = self.headers.get('Range')   # pedido parcial: o player só pula pro meio de um mp3 longo com isso
+            if rg and rg.startswith('bytes='):
+                a, _, b = rg[6:].partition('-'); a = int(a or 0); b = int(b) if b else len(body) - 1
+                part = body[a:b + 1]; self.send_response(206)
+                self.send_header('Content-Range', f'bytes {a}-{a + len(part) - 1}/{len(body)}')
+                self.send_header('Content-Type', ct); self.send_header('Accept-Ranges', 'bytes')
+                self.send_header('Content-Length', str(len(part))); self.end_headers(); self.wfile.write(part); return
+            self.send_response(200); self.send_header('Content-Type', ct); self.send_header('Accept-Ranges', 'bytes')
             self.send_header('Content-Length', str(len(body))); self.end_headers(); self.wfile.write(body); return
         body = open(page, 'rb').read()
         self.send_response(200); self.send_header('Content-Type', 'text/html; charset=utf-8')
